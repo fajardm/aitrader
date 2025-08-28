@@ -39,38 +39,23 @@ import yfinance as yf
 import requests
 
 class TickerParam:
+    symbol: str
     name: str
     ema_short: int
     ema_long: int
-    rsi_period: int
+    rsi: int
 
-    def __init__(self, name: str, ema_short: int, ema_long: int, rsi_period: int):
+    def __init__(self, symbol: str, name: str, ema_short: int, ema_long: int, rsi: int):
+        self.symbol = symbol
         self.name = name
         self.ema_short = ema_short
         self.ema_long = ema_long
-        self.rsi_period = rsi_period
+        self.rsi = rsi
 
-list_tickers = [
-    TickerParam("WIFI.JK", 14, 58, 19),
-    TickerParam("BRPT.JK", 18, 54, 20),
-    TickerParam("CUAN.JK", 15, 44, 8),
-    TickerParam("BRIS.JK", 10, 65, 13),
-    TickerParam("ISAT.JK", 11, 63, 11),
-    TickerParam("BRMS.JK", 11, 63, 11),
-    TickerParam("ANTM.JK", 11, 63, 11),
-    TickerParam("EMTK.JK", 11, 63, 11),
-    TickerParam("NCKL.JK", 11, 63, 11),
-    TickerParam("PGEO.JK", 11, 63, 11),
-    TickerParam("ADRO.JK", 11, 63, 11),
-    TickerParam("MTEL.JK", 11, 63, 11),
-    TickerParam("MYOR.JK", 11, 63, 11),
-    TickerParam("PTRO.JK", 10, 36, 8),
-    TickerParam("JPFA.JK", 11, 63, 11),
-    TickerParam("COIN.JK", 15, 54, 14),
-    TickerParam("WIRG.JK", 27, 63, 15),
-    # Crypto
-    TickerParam("DOGE-USD", 17, 39, 20),
-]
+def load_ticker(path: str):
+    with open(path, 'r') as f:
+        data = json.load(f)
+    return [TickerParam(**item) for item in data]
 
 # =========================
 # Feature engineering utils
@@ -159,7 +144,7 @@ def render_prompt(row: pd.Series, ticker: str, risk_pct: float) -> str:
         f"Bollinger mid/low/up: {row.BB_MID:.2f}, {row.BB_LOW:.2f}, {row.BB_UP:.2f}\n"
         f"Regime: {row.Regime}\n"
         f"Kandidat: Pullback_EMA_SHORT {row.Pullback_EMA_SHORT:.2f}, Pullback_ATR {row.Pullback_ATR:.2f}\n"
-        f"Risk per trade max: {risk_pct}%. Output JSON only with keys: regime, enter{{type,price}}, stop_loss, take_profits[3], position_size_pct, confidence, rationale."
+        f"Risk per trade max: {risk_pct}%. Output JSON only with keys: regime, enter{{type,prices[2]}}, stop_loss, take_profits[3], position_size_pct, confidence, rationale."
     )
 
 def safe_parse_llm_json(text: str) -> Optional[Dict[str, Any]]:
@@ -210,7 +195,7 @@ def fallback_decision(row: pd.Series) -> Dict[str, Any]:
 
     return {
         "regime": regime,
-        "enter": {"type": "limit", "zone_1": float(zone_1), "zone_2": float(zone_2)},
+        "enter": {"type": "limit", "prices": [float(zone_1), float(zone_2)]},
         "stop_loss": sl,
         "take_profits": [tp1, tp2, tp3],
         "position_size_pct": round(position_size_pct, 2),
@@ -306,12 +291,13 @@ def simulate(df: pd.DataFrame, ticker: str, start_idx: int, init_equity: float, 
                 entry_date = nxt.name
                 in_pos = qty > 0
             else:
-                zone_1 = float(entry_plan.get('zone_1', np.nan))
-                zone_2 = float(entry_plan.get('zone_2', np.nan))
-                if not np.isnan(zone_1) and not np.isnan(zone_2):
+                prices = entry_plan.get('prices', None)
+                if prices and isinstance(prices, (list, tuple)) and len(prices) == 2:
+                    zone_low = float(min(prices))
+                    zone_high = float(max(prices))
                     # Entry jika harga hari berikutnya overlap dengan zona entry
-                    if nxt['High'] >= zone_1 and nxt['Low'] <= zone_2:
-                        entry_px = max(nxt['Low'], zone_1)  # atau bisa gunakan harga open/zone_1 sesuai strategi
+                    if nxt['High'] >= zone_low and nxt['Low'] <= zone_high:
+                        entry_px = max(nxt['Low'], zone_low)
                         sl_px = float(decision['stop_loss'])
                         tp1, tp2, tp3 = [float(x) for x in decision['take_profits']]
                         qty = position_qty(equity, entry_px, sl_px, risk_pct)
@@ -360,7 +346,7 @@ def build_dataset(df: pd.DataFrame, ticker: TickerParam) -> pd.DataFrame:
     # Indicators
     df['EMA_SHORT'] = ema(df['Close'], ticker.ema_short)
     df['EMA_LONG'] = ema(df['Close'], ticker.ema_long)
-    df['RSI'] = rsi(df['Close'], ticker.rsi_period)
+    df['RSI'] = rsi(df['Close'], ticker.rsi)
 
     # MACD histogram
     ema12 = df['Close'].ewm(span=12, adjust=False).mean()
@@ -454,14 +440,9 @@ def optuna_objective(trial, raw_df, equity, risk_pct, use_llm):
     metrics = result['metrics']
 
     # Objective: maximize win rate, minimize drawdown (multi-objective, here as a weighted sum)
-    # retrun_pct = metrics['total_return_pct']
     win_rate = metrics['win_rate_pct']
     max_drawdown = metrics['max_drawdown_pct']
 
-    # if not (-2.0 <= max_drawdown <= -1.0):
-    #     # Penalize solutions outside the drawdown range
-    #     return -1000
-    
     print(f"Trial {trial.number}: win_rate={win_rate:.2f}%, drawdown={max_drawdown:.2f}%")
     # You can adjust weights as needed
     score = win_rate - abs(max_drawdown)
@@ -477,8 +458,9 @@ def run_optuna(raw_df, equity, risk_pct, use_llm, n_trials):
 
 def backtest(args):
     # Load raw OHLCV
+    list_tickers = load_ticker('./issi.json')
     raw = load_ohlcv(args.ticker, args.start)
-    ticker = next((t for t in list_tickers if t.name == args.ticker), None)
+    ticker = next((t for t in list_tickers if t.symbol == args.ticker), None)
     df = build_dataset(raw, ticker)
 
     # Start index after indicators are warmed up
@@ -504,23 +486,43 @@ def backtest(args):
 
 def live_signal_loop(args):
     while True:
-        tickers = list_tickers
+        tickers = load_ticker('./issi.json')
         if args.ticker is not None:
-            tickers = [TickerParam(args.ticker, 20, 50, 14)]
+            tickers = [TickerParam(args.ticker, args.ticker, 20, 50, 14)]
 
         for ticker in tickers:
-            raw = load_ohlcv(ticker.name, args.start)
+            raw = load_ohlcv(ticker.symbol, args.start)
             df = build_dataset(raw, ticker)
-            latest_row = df.iloc[-1]  # Only process the latest bar
+            
+            target_date = None
+            if args.last_date:
+                target_date = pd.to_datetime(args.last_date)
+            else:
+                target_date = (pd.Timestamp.now() - pd.Timedelta(days=1)).normalize() # default is yesterday
+            # Find row with index == target_date
+            row = df[df.index.normalize() == target_date]
+            selected_row = None
+            if not row.empty:
+                selected_row = row.iloc[0]
 
             # Generate signal for the latest bar
             if not args.no_llm:
-                prompt = render_prompt(latest_row, ticker=ticker.name, risk_pct=args.risk)
+                prompt = render_prompt(selected_row, ticker=ticker.symbol, risk_pct=args.risk)
                 decision = call_llm(prompt)
             else:
-                decision = fallback_decision(latest_row)
+                decision = fallback_decision(selected_row)
 
-            print(f"{ticker.name} [{latest_row.name.date()}] Signal: {decision}")
+            entry_plan = decision['enter']
+            prices = entry_plan.get('prices', None)
+            zone_low = float(min(prices))
+            zone_high = float(max(prices))
+            latest_row = df.iloc[-1]
+    
+            if latest_row.High >= zone_low and latest_row.Low <= zone_high:
+                decision['enter']['type'] = 'market'
+                decision['enter']['action_price'] = float(max(latest_row.Low, zone_low))
+
+            print(f"{ticker.symbol} [{selected_row.name.date()}] Signal: {decision}")
 
         # Wait 15 minutes before checking again
         time.sleep(900)
@@ -538,11 +540,37 @@ def main():
     parser.add_argument('--no-llm', action='store_true', help='Disable LLM and use fallback only')
     parser.add_argument('--optimize', action='store_true', help='Run Optuna parameter optimization')
     parser.add_argument('--backtest', action='store_true', help='Run backtest')
+    parser.add_argument('--last-date', type=str, default=None, help='Last date to consider for live trading')
     args = parser.parse_args()
 
     if args.optimize:
-        df = load_ohlcv(args.ticker, args.start)
-        run_optuna(df, args.equity, args.risk, not args.no_llm, n_trials=1000)
+        all_tickers = load_ticker('./issi.json')
+        if args.ticker is not None:
+            # Find the ticker in all_tickers
+            target = next((t for t in all_tickers if t.symbol == args.ticker), None)
+            if target is None:
+                # If not found, create a new one and add to the list
+                target = TickerParam(args.ticker, args.ticker, 20, 50, 14)
+                all_tickers.append(target)
+            df = load_ohlcv(target.symbol, args.start)
+            study = run_optuna(df, args.equity, args.risk, not args.no_llm, n_trials=500)
+            target.ema_short = study.best_params['EMA_SHORT']
+            target.ema_long = study.best_params['EMA_LONG']
+            target.rsi = study.best_params['RSI']
+        else:
+            # Optimize all tickers
+            for ticker in all_tickers:
+                print(f"Optimizing {ticker.symbol}...")
+                df = load_ohlcv(ticker.symbol, args.start)
+                study = run_optuna(df, args.equity, args.risk, not args.no_llm, n_trials=500)
+                ticker.ema_short = study.best_params['EMA_SHORT']
+                ticker.ema_long = study.best_params['EMA_LONG']
+                ticker.rsi = study.best_params['RSI']
+
+        # Save all tickers back to issi.json
+        with open('./issi.json', 'w') as f:
+            json.dump([t.__dict__ for t in all_tickers], f, indent=2)
+
         return
 
     if args.backtest:

@@ -1,0 +1,4335 @@
+[
+  {
+    "symbol": "AADI.JK",
+    "name": "Adaro Andalan Indonesia Tbk.",
+    "ema_short": 30,
+    "ema_long": 35,
+    "rsi": 18
+  },
+  {
+    "symbol": "AALI.JK",
+    "name": "Astra Agro Lestari Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ACES.JK",
+    "name": "Aspirasi Hidup Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ACRO.JK",
+    "name": "Samcro Hyosung Adilestari Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ACST.JK",
+    "name": "Acset Indonusa Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ADCP.JK",
+    "name": "Adhi Commuter Properti Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ADES.JK",
+    "name": "Akasha Wira International Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ADHI.JK",
+    "name": "Adhi Karya (Persero) Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ADMG.JK",
+    "name": "Polychem Indonesia Tbk",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ADMR.JK",
+    "name": "Adaro Minerals Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ADRO.JK",
+    "name": "Alamtri Resources Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "AGAR.JK",
+    "name": "Asia Sejahtera Mina Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "AGII.JK",
+    "name": "Samator Indo Gas Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "AIMS.JK",
+    "name": "Artha Mahiya Investama Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "AISA.JK",
+    "name": "FKS Food Sejahtera Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "AKKU.JK",
+    "name": "Anugerah Kagum Karya Utama Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "AKPI.JK",
+    "name": "Argha Karya Prima Industry Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "AKRA.JK",
+    "name": "AKR Corporindo Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "AKSI.JK",
+    "name": "Mineral Sumberdaya Mandiri Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ALDO.JK",
+    "name": "Alkindo Naratama Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "AMAN.JK",
+    "name": "Makmur Berkah Amanda Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "AMFG.JK",
+    "name": "Asahimas Flat Glass Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "AMIN.JK",
+    "name": "Ateliers Mecaniques D Indonesie Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "AMMN.JK",
+    "name": "Amman Mineral Internasional Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ANDI.JK",
+    "name": "Andira Agro Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ANJT.JK",
+    "name": "Austindo Nusantara Jaya Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ANTM.JK",
+    "name": "Aneka Tambang Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "APII.JK",
+    "name": "Arita Prima Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "APLI.JK",
+    "name": "Asiaplast Industries Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "APLN.JK",
+    "name": "Agung Podomoro Land Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ARCI.JK",
+    "name": "Archi Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "AREA.JK",
+    "name": "Dunia Virtual Online Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ARGO.JK",
+    "name": "Argo Pantes Tbk",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ARII.JK",
+    "name": "Atlas Resources Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ARNA.JK",
+    "name": "Arwana Citramulia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ARTA.JK",
+    "name": "Arthavest Tbk",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ASGR.JK",
+    "name": "Astra Graphia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ASHA.JK",
+    "name": "Cilacap Samudera Fishing Industry Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ASII.JK",
+    "name": "Astra International Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ASLC.JK",
+    "name": "Autopedia Sukses Lestari Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ASLI.JK",
+    "name": "Asri Karya Lestari Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ASPI.JK",
+    "name": "Andalan Sakti Primaindo Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ASRI.JK",
+    "name": "Alam Sutera Realty Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ATAP.JK",
+    "name": "Trimitra Prawara Goldland Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ATIC.JK",
+    "name": "Anabatic Technologies Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ATLA.JK",
+    "name": "Atlantis Subsea Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "AUTO.JK",
+    "name": "Astra Otoparts Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "AVIA.JK",
+    "name": "Avia Avian Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "AWAN.JK",
+    "name": "Era Digital Media Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "AXIO.JK",
+    "name": "Tera Data Indonusa Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "AYAM.JK",
+    "name": "Janu Putra Sejahtera Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "AYLS.JK",
+    "name": "Agro Yasa Lestari Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BABY.JK",
+    "name": "Multitrend Indo Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BAIK.JK",
+    "name": "Bersama Mencapai Puncak Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BALI.JK",
+    "name": "Bali Towerindo Sentra Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BANK.JK",
+    "name": "Bank Aladin Syariah Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BAPA.JK",
+    "name": "Bekasi Asri Pemula Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BAPI.JK",
+    "name": "Bhakti Agung Propertindo Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BATA.JK",
+    "name": "Sepatu Bata Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BATR.JK",
+    "name": "Benteng Api Technic Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BAUT.JK",
+    "name": "Mitra Angkasa Sejahtera Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BAYU.JK",
+    "name": "Bayu Buana Tbk",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BBRM.JK",
+    "name": "Pelayaran Nasional Bina Buana Raya Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BBSS.JK",
+    "name": "Bumi Benowo Sukses Sejahtera Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BCIP.JK",
+    "name": "Bumi Citra Permai Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BEBS.JK",
+    "name": "Berkah Beton Sadaya Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BEEF.JK",
+    "name": "Estika Tata Tiara Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BELI.JK",
+    "name": "Global Digital Niaga Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BELL.JK",
+    "name": "Trisula Textile Industries Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BESS.JK",
+    "name": "Batulicin Nusantara Maritim Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BEST.JK",
+    "name": "Bekasi Fajar Industrial Estate Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BIKA.JK",
+    "name": "Binakarya Jaya Abadi Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BIKE.JK",
+    "name": "Sepeda Bersama Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BINO.JK",
+    "name": "Perma Plasindo Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BIPP.JK",
+    "name": "Bhuwanatala Indah Permai Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BIRD.JK",
+    "name": "Blue Bird Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BISI.JK",
+    "name": "BISI International Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BKDP.JK",
+    "name": "Bukit Darmo Property Tbk",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BKSL.JK",
+    "name": "Sentul City Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BLES.JK",
+    "name": "Superior Prima Sukses Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BLTA.JK",
+    "name": "Berlian Laju Tanker Tbk",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BLTZ.JK",
+    "name": "Graha Layar Prima Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BLUE.JK",
+    "name": "Berkah Prima Perkasa Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BMHS.JK",
+    "name": "Bundamedik Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BMSR.JK",
+    "name": "Bintang Mitra Semestaraya Tbk",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BMTR.JK",
+    "name": "Global Mediacom Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BNBR.JK",
+    "name": "Bakrie & Brothers Tbk",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BOBA.JK",
+    "name": "Formosa Ingredient Factory Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BOGA.JK",
+    "name": "Bintang Oto Global Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BOLA.JK",
+    "name": "Bali Bintang Sejahtera Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BOLT.JK",
+    "name": "Garuda Metalindo Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BRAM.JK",
+    "name": "Indo Kordsa Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BRIS.JK",
+    "name": "Bank Syariah Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BRMS.JK",
+    "name": "Bumi Resources Minerals Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BRRC.JK",
+    "name": "Raja Roti Cemerlang Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BSBK.JK",
+    "name": "Wulandari Bangun Laksana Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BSDE.JK",
+    "name": "Bumi Serpong Damai Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BSML.JK",
+    "name": "Bintang Samudera Mandiri Lines Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BSSR.JK",
+    "name": "Baramulti Suksessarana Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BTON.JK",
+    "name": "Betonjaya Manunggal Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BTPS.JK",
+    "name": "Bank BTPN Syariah Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BUAH.JK",
+    "name": "Segar Kumala Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BUDI.JK",
+    "name": "Budi Starch & Sweetener Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BUKK.JK",
+    "name": "Bukaka Teknik Utama Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BULL.JK",
+    "name": "Buana Lintas Lautan Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BUMI.JK",
+    "name": "Bumi Resources Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BUVA.JK",
+    "name": "Bukit Uluwatu Villa Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "BYAN.JK",
+    "name": "Bayan Resources Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "CAKK.JK",
+    "name": "Cahayaputra Asa Keramik Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "CAMP.JK",
+    "name": "Campina Ice Cream Industry Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "CANI.JK",
+    "name": "Capitol Nusantara Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "CARE.JK",
+    "name": "Metro Healthcare Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "CASS.JK",
+    "name": "Cardig Aero Services Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "CBPE.JK",
+    "name": "Citra Buana Prasida Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "CBRE.JK",
+    "name": "Cakra Buana Resources Energi Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "CCSI.JK",
+    "name": "Communication Cable Systems Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "CEKA.JK",
+    "name": "Wilmar Cahaya Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "CGAS.JK",
+    "name": "Citra Nusantara Gemilang Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "CHEM.JK",
+    "name": "Chemstar Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "CINT.JK",
+    "name": "Chitose Internasional Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "CITA.JK",
+    "name": "Cita Mineral Investindo Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "CITY.JK",
+    "name": "Natura City Developments Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "CLEO.JK",
+    "name": "Sariguna Primatirta Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "CLPI.JK",
+    "name": "Colorpak Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "CMNP.JK",
+    "name": "Citra Marga Nusaphala Persada Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "CMPP.JK",
+    "name": "AirAsia Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "CMRY.JK",
+    "name": "Cisarua Mountain Dairy Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "CNMA.JK",
+    "name": "Nusantara Sejahtera Raya Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "COAL.JK",
+    "name": "Black Diamond Resources Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "CPIN.JK",
+    "name": "Charoen Pokphand Indonesia Tbk",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "CPRO.JK",
+    "name": "Central Proteina Prima Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "CRAB.JK",
+    "name": "Toba Surimi Industries Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "CRSN.JK",
+    "name": "Carsurin Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "CSAP.JK",
+    "name": "Catur Sentosa Adiprana Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "CSIS.JK",
+    "name": "Cahayasakti Investindo Sukses Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "CSMI.JK",
+    "name": "Cipta Selera Murni Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "CSRA.JK",
+    "name": "Cisadane Sawit Raya Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "CTBN.JK",
+    "name": "Citra Tubindo Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "CTRA.JK",
+    "name": "Ciputra Development Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "CYBR.JK",
+    "name": "ITSEC Asia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "DAAZ.JK",
+    "name": "Daaz Bara Lestari Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "DADA.JK",
+    "name": "Diamond Citra Propertindo Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "DATA.JK",
+    "name": "Remala Abadi Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "DAYA.JK",
+    "name": "Duta Intidaya Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "DCII.JK",
+    "name": "DCI Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "DEPO.JK",
+    "name": "Caturkarda Depo Bangunan Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "DEWA.JK",
+    "name": "Darma Henwa Tbk",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "DEWI.JK",
+    "name": "Dewi Shri Farmindo Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "DGIK.JK",
+    "name": "Nusa Konstruksi Enjiniring Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "DGNS.JK",
+    "name": "Diagnos Laboratorium Utama Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "DILD.JK",
+    "name": "Intiland Development Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "DIVA.JK",
+    "name": "Distribusi Voucher Nusantara Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "DKFT.JK",
+    "name": "Central Omega Resources Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "DMAS.JK",
+    "name": "Puradelta Lestari Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "DMMX.JK",
+    "name": "Digital Mediatama Maxima Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "DMND.JK",
+    "name": "Diamond Food Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "DOOH.JK",
+    "name": "Era Media Sejahtera Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "DRMA.JK",
+    "name": "Dharma Polimetal Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "DSFI.JK",
+    "name": "Dharma Samudera Fishing Industries Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "DSNG.JK",
+    "name": "Dharma Satya Nusantara Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "DSSA.JK",
+    "name": "Dian Swastatika Sentosa Tbk",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "DUTI.JK",
+    "name": "Duta Pertiwi Tbk",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "DVLA.JK",
+    "name": "Darya-Varia Laboratoria Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "DWGL.JK",
+    "name": "Dwi Guna Laksana Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "DYAN.JK",
+    "name": "Dyandra Media International Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "EAST.JK",
+    "name": "Eastparc Hotel Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ECII.JK",
+    "name": "Electronic City Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "EDGE.JK",
+    "name": "Indointernet Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "EKAD.JK",
+    "name": "Ekadharma International Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ELIT.JK",
+    "name": "Data Sinergitama Jaya Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ELPI.JK",
+    "name": "Pelayaran Nasional Ekalya Purnamasari Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ELSA.JK",
+    "name": "Elnusa Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ELTY.JK",
+    "name": "Bakrieland Development Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "EMDE.JK",
+    "name": "Megapolitan Developments Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "EMTK.JK",
+    "name": "Elang Mahkota Teknologi Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ENAK.JK",
+    "name": "Champ Resto Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ENRG.JK",
+    "name": "Energi Mega Persada Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ENZO.JK",
+    "name": "Morenzo Abadi Perkasa Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "EPAC.JK",
+    "name": "Megalestari Epack Sentosaraya Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "EPMT.JK",
+    "name": "Enseval Putera Megatrading Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ERAA.JK",
+    "name": "Erajaya Swasembada Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ERAL.JK",
+    "name": "Sinar Eka Selaras Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ESIP.JK",
+    "name": "Sinergi Inti Plastindo Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ESSA.JK",
+    "name": "ESSA Industries Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ESTA.JK",
+    "name": "Esta Multi Usaha Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "EXCL.JK",
+    "name": "XL Axiata Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "FAPA.JK",
+    "name": "FAP Agri Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "FAST.JK",
+    "name": "Fast Food Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "FILM.JK",
+    "name": "MD Entertainment Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "FIRE.JK",
+    "name": "Alfa Energi Investama Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "FISH.JK",
+    "name": "FKS Multi Agro Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "FITT.JK",
+    "name": "Hotel Fitra International Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "FMII.JK",
+    "name": "Fortune Mate Indonesia Tbk",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "FOLK.JK",
+    "name": "Multi Garam Utama Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "FOOD.JK",
+    "name": "Sentra Food Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "FORU.JK",
+    "name": "Fortune Indonesia Tbk",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "FPNI.JK",
+    "name": "Lotte Chemical Titan Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "FREN.JK",
+    "name": "Smartfren Telecom Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "FUTR.JK",
+    "name": "Lini Imaji Kreasi Ekosistem Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "FWCT.JK",
+    "name": "Wijaya Cahaya Timber Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "GDST.JK",
+    "name": "Gunawan Dianjaya Steel Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "GDYR.JK",
+    "name": "Goodyear Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "GEMA.JK",
+    "name": "Gema Grahasarana Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "GEMS.JK",
+    "name": "Golden Energy Mines Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "GGRP.JK",
+    "name": "Gunung Raja Paksi Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "GHON.JK",
+    "name": "Gihon Telekomunikasi Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "GIAA.JK",
+    "name": "Garuda Indonesia (Persero) Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "GJTL.JK",
+    "name": "Gajah Tunggal Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "GLVA.JK",
+    "name": "Galva Technologies Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "GMTD.JK",
+    "name": "Gowa Makassar Tourism Development Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "GOLD.JK",
+    "name": "Visi Telekomunikasi Infrastruktur Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "GOLF.JK",
+    "name": "Intra Golflink Resorts Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "GOOD.JK",
+    "name": "Garudafood Putra Putri Jaya Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "GPRA.JK",
+    "name": "Perdana Gapuraprima Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "GPSO.JK",
+    "name": "Geoprima Solusi Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "GRIA.JK",
+    "name": "Ingria Pratama Capitalindo Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "GRPH.JK",
+    "name": "Griptha Putra Persada Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "GTBO.JK",
+    "name": "Garda Tujuh Buana Tbk",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "GTRA.JK",
+    "name": "Grahaprima Suksesmandiri Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "GTSI.JK",
+    "name": "GTS Internasional Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "GULA.JK",
+    "name": "Aman Agrindo Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "GUNA.JK",
+    "name": "Gunanusa Eramandiri Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "GWSA.JK",
+    "name": "Greenwood Sejahtera Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "GZCO.JK",
+    "name": "Gozco Plantations Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "HADE.JK",
+    "name": "Himalaya Energi Perkasa Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "HAIS.JK",
+    "name": "Hasnur Internasional Shipping Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "HALO.JK",
+    "name": "Haloni Jane Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "HATM.JK",
+    "name": "Habco Trans Maritima Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "HDIT.JK",
+    "name": "Hensel Davest Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "HEAL.JK",
+    "name": "Medikaloka Hermina Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "HERO.JK",
+    "name": "DFI Retail Nusantara Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "HEXA.JK",
+    "name": "Hexindo Adiperkasa Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "HGII.JK",
+    "name": "Hero Global Investment Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "HILL.JK",
+    "name": "Hillcon Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "HITS.JK",
+    "name": "Humpuss Intermoda Transportasi Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "HOKI.JK",
+    "name": "Buyung Poetra Sembada Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "HOMI.JK",
+    "name": "Grand House Mulia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "HOPE.JK",
+    "name": "Harapan Duta Pertiwi Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "HRME.JK",
+    "name": "Menteng Heritage Realty Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "HRUM.JK",
+    "name": "Harum Energy Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "HUMI.JK",
+    "name": "Humpuss Maritim Internasional Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "HYGN.JK",
+    "name": "Ecocare Indo Pasifik Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "IATA.JK",
+    "name": "MNC Energy Investments Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "IBST.JK",
+    "name": "Inti Bangun Sejahtera Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ICBP.JK",
+    "name": "Indofood CBP Sukses Makmur Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ICON.JK",
+    "name": "Island Concepts Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "IDPR.JK",
+    "name": "Indonesia Pondasi Raya Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "IFII.JK",
+    "name": "Indonesia Fibreboard Industry Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "IFSH.JK",
+    "name": "Ifishdeco Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "IGAR.JK",
+    "name": "Champion Pacific Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "IIKP.JK",
+    "name": "Inti Agri Resources Tbk",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "IKAI.JK",
+    "name": "Intikeramik Alamasri Industri Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "IKAN.JK",
+    "name": "Era Mandiri Cemerlang Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "IKBI.JK",
+    "name": "Sumi Indo Kabel Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "IKPM.JK",
+    "name": "Ikapharmindo Putramas Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "IMPC.JK",
+    "name": "Impack Pratama Industri Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "INCI.JK",
+    "name": "Intanwijaya Internasional Tbk",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "INCO.JK",
+    "name": "Vale Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "INDF.JK",
+    "name": "Indofood Sukses Makmur Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "INDR.JK",
+    "name": "Indo-Rama Synthetics Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "INDS.JK",
+    "name": "Indospring Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "INDX.JK",
+    "name": "Tanah Laut Tbk",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "INDY.JK",
+    "name": "Indika Energy Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "INET.JK",
+    "name": "Sinergi Inti Andalan Prima Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "INKP.JK",
+    "name": "Indah Kiat Pulp & Paper Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "INTD.JK",
+    "name": "Inter Delta Tbk",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "INTP.JK",
+    "name": "Indocement Tunggal Prakarsa Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "IOTF.JK",
+    "name": "Sumber Sinergi Makmur Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "IPCC.JK",
+    "name": "Indonesia Kendaraan Terminal Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "IPCM.JK",
+    "name": "Jasa Armada Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "IPOL.JK",
+    "name": "Indopoly Swakarsa Industry Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "IPPE.JK",
+    "name": "Indo Pureco Pratama Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "IPTV.JK",
+    "name": "MNC Vision Networks Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "IRRA.JK",
+    "name": "Itama Ranoraya Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "IRSX.JK",
+    "name": "Aviana Sinar Abadi Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ISAT.JK",
+    "name": "Indosat Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ISSP.JK",
+    "name": "Steel Pipe Industry of Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ITMA.JK",
+    "name": "Sumber Energi Andalan Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ITMG.JK",
+    "name": "Indo Tambangraya Megah Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "JAST.JK",
+    "name": "Jasnita Telekomindo Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "JATI.JK",
+    "name": "Informasi Teknologi Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "JAYA.JK",
+    "name": "Armada Berjaya Trans Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "JECC.JK",
+    "name": "Jembo Cable Company Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "JGLE.JK",
+    "name": "Graha Andrasentra Propertindo Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "JIHD.JK",
+    "name": "Jakarta International Hotels & Development Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "JKON.JK",
+    "name": "Jaya Konstruksi Manggala Pratama Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "JMAS.JK",
+    "name": "Asuransi Jiwa Syariah Jasa Mitra Abadi Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "JPFA.JK",
+    "name": "Japfa Comfeed Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "JRPT.JK",
+    "name": "Jaya Real Property Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "JSPT.JK",
+    "name": "Jakarta Setiabudi Internasional Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "JTPE.JK",
+    "name": "Jasuindo Tiga Perkasa Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "KAEF.JK",
+    "name": "Kimia Farma Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "KARW.JK",
+    "name": "Meratus Jasa Prima Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "KBAG.JK",
+    "name": "Karya Bersama Anugerah Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "KBLI.JK",
+    "name": "KMI Wire & Cable Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "KBLM.JK",
+    "name": "Kabelindo Murni Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "KDSI.JK",
+    "name": "Kedawung Setia Industrial Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "KDTN.JK",
+    "name": "Puri Sentul Permai Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "KEEN.JK",
+    "name": "Kencana Energi Lestari Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "KEJU.JK",
+    "name": "Mulia Boga Raya Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "KETR.JK",
+    "name": "Ketrosden Triasmitra Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "KIAS.JK",
+    "name": "Keramika Indonesia Assosiasi Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "KICI.JK",
+    "name": "Kedaung Indah Can Tbk",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "KIJA.JK",
+    "name": "Kawasan Industri Jababeka Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "KINO.JK",
+    "name": "Kino Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "KIOS.JK",
+    "name": "Kioson Komersial Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "KJEN.JK",
+    "name": "Krida Jaringan Nusantara Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "KKES.JK",
+    "name": "Kusuma Kemindo Sentosa Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "KKGI.JK",
+    "name": "Resource Alam Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "KLAS.JK",
+    "name": "Pelayaran Kurnia Lautan Semesta Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "KLBF.JK",
+    "name": "Kalbe Farma Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "KMDS.JK",
+    "name": "Kurniamitra Duta Sentosa Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "KOCI.JK",
+    "name": "Kokoh Exa Nusantara Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "KOIN.JK",
+    "name": "Kokoh Inti Arebama Tbk",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "KOKA.JK",
+    "name": "Koka Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "KONI.JK",
+    "name": "Perdana Bangun Pusaka Tbk",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "KOPI.JK",
+    "name": "Mitra Energi Persada Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "KOTA.JK",
+    "name": "DMS Propertindo Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "KPIG.JK",
+    "name": "MNC Land Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "KREN.JK",
+    "name": "Quantum Clovera Investama Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "KRYA.JK",
+    "name": "Bangun Karya Perkasa Jaya Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "KSIX.JK",
+    "name": "Kentanix Supra International Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "KUAS.JK",
+    "name": "Ace Oldfields Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "LABA.JK",
+    "name": "Green Power Group Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "LABS.JK",
+    "name": "UBC Medical Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "LAJU.JK",
+    "name": "Jasa Berdikari Logistics Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "LAND.JK",
+    "name": "Trimitra Propertindo Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "LCKM.JK",
+    "name": "LCK Global Kedaton Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "LION.JK",
+    "name": "Lion Metal Works Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "LIVE.JK",
+    "name": "Homeco Victoria Makmur Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "LMPI.JK",
+    "name": "Langgeng Makmur Industri Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "LMSH.JK",
+    "name": "Lionmesh Prima Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "LPCK.JK",
+    "name": "Lippo Cikarang Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "LPIN.JK",
+    "name": "Multi Prima Sejahtera Tbk",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "LPKR.JK",
+    "name": "Lippo Karawaci Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "LPLI.JK",
+    "name": "Star Pacific Tbk",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "LPPF.JK",
+    "name": "Matahari Department Store Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "LRNA.JK",
+    "name": "Eka Sari Lorena Transport Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "LSIP.JK",
+    "name": "PP London Sumatra Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "LTLS.JK",
+    "name": "Lautan Luas Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "LUCK.JK",
+    "name": "Sentral Mitra Informatika Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MAHA.JK",
+    "name": "Mandiri Herindo Adiperkasa Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MAIN.JK",
+    "name": "Malindo Feedmill Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MAPA.JK",
+    "name": "Map Aktif Adiperkasa Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MAPB.JK",
+    "name": "MAP Boga Adiperkasa Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MAPI.JK",
+    "name": "Mitra Adiperkasa Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MARK.JK",
+    "name": "Mark Dynamics Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MASA.JK",
+    "name": "Multistrada Arah Sarana Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MAXI.JK",
+    "name": "Maxindo Karya Anugerah Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MBAP.JK",
+    "name": "Mitrabara Adiperdana Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MBMA.JK",
+    "name": "Merdeka Battery Materials Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MBTO.JK",
+    "name": "Martina Berto Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MCAS.JK",
+    "name": "M Cash Integrasi Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MCOL.JK",
+    "name": "Prima Andalan Mandiri Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MDIY.JK",
+    "name": "Daya Intiguna Yasa Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MDKA.JK",
+    "name": "Merdeka Copper Gold Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MDKI.JK",
+    "name": "Emdeki Utama Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MEDC.JK",
+    "name": "Medco Energi Internasional Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MEDS.JK",
+    "name": "Hetzer Medical Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MERK.JK",
+    "name": "Merck Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "META.JK",
+    "name": "Nusantara Infrastructure Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MFMI.JK",
+    "name": "Multifiling Mitra Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MGNA.JK",
+    "name": "Magna Investama Mandiri Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MHKI.JK",
+    "name": "Multi Hanna Kreasindo Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MICE.JK",
+    "name": "Multi Indocitra Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MIKA.JK",
+    "name": "Mitra Keluarga Karyasehat Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MINA.JK",
+    "name": "Sanurhasta Mitra Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MIRA.JK",
+    "name": "Mitra International Resources Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MITI.JK",
+    "name": "Mitra Investindo Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MKAP.JK",
+    "name": "Multikarya Asia Pasifik Raya Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MKPI.JK",
+    "name": "Metropolitan Kentjana Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MKTR.JK",
+    "name": "Menthobi Karyatama Raya Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MLIA.JK",
+    "name": "Mulia Industrindo Tbk",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MLPL.JK",
+    "name": "Multipolar Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MLPT.JK",
+    "name": "Multipolar Technology Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MMIX.JK",
+    "name": "Multi Medika Internasional Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MMLP.JK",
+    "name": "Mega Manunggal Property Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MNCN.JK",
+    "name": "Media Nusantara Citra Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MORA.JK",
+    "name": "Mora Telematika Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MPIX.JK",
+    "name": "Mitra Pedagang Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MPMX.JK",
+    "name": "Mitra Pinasthika Mustika Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MPOW.JK",
+    "name": "Megapower Makmur Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MPPA.JK",
+    "name": "Matahari Putra Prima Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MPRO.JK",
+    "name": "Maha Properti Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MPXL.JK",
+    "name": "MPX Logistics International Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MRAT.JK",
+    "name": "Mustika Ratu Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MSIN.JK",
+    "name": "MNC Digital Entertainment Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MSJA.JK",
+    "name": "Multi Spunindo Jaya Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MSKY.JK",
+    "name": "MNC Sky Vision Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MSTI.JK",
+    "name": "Mastersystem Infotama Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MTDL.JK",
+    "name": "Metrodata Electronics Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MTEL.JK",
+    "name": "Dayamitra Telekomunikasi Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MTFN.JK",
+    "name": "Capitalinc Investment Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MTLA.JK",
+    "name": "Metropolitan Land Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MTMH.JK",
+    "name": "Murni Sadar Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MTSM.JK",
+    "name": "Metro Realty Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MUTU.JK",
+    "name": "Mutuagung Lestari Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MYOH.JK",
+    "name": "Samindo Resources Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "MYOR.JK",
+    "name": "Mayora Indah Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "NAIK.JK",
+    "name": "Adiwarna Anugerah Abadi Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "NASA.JK",
+    "name": "Andalan Perkasa Abadi Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "NASI.JK",
+    "name": "Wahana Inti Makmur Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "NCKL.JK",
+    "name": "Trimegah Bangun Persada Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "NELY.JK",
+    "name": "Pelayaran Nelly Dwi Putri Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "NFCX.JK",
+    "name": "NFC Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "NICE.JK",
+    "name": "Adhi Kartiko Pratama Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "NICL.JK",
+    "name": "PAM Mineral Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "NPGF.JK",
+    "name": "Nusa Palapa Gemilang Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "NRCA.JK",
+    "name": "Nusa Raya Cipta Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "NTBK.JK",
+    "name": "Nusatama Berkah Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "NZIA.JK",
+    "name": "Nusantara Almazia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "OASA.JK",
+    "name": "Maharaksa Biru Energi Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "OBMD.JK",
+    "name": "OBM Drilchem Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "OILS.JK",
+    "name": "Indo Oil Perkasa Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "OKAS.JK",
+    "name": "Ancora Indonesia Resources Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "OMED.JK",
+    "name": "Jayamas Medica Industri Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "OMRE.JK",
+    "name": "Indonesia Prima Property Tbk",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "OPMS.JK",
+    "name": "Optima Prima Metal Sinergi Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PADA.JK",
+    "name": "Personel Alih Daya Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PALM.JK",
+    "name": "Provident Investasi Bersama Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PAMG.JK",
+    "name": "Bima Sakti Pertiwi Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PANI.JK",
+    "name": "Pantai Indah Kapuk Dua Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PANR.JK",
+    "name": "Panorama Sentrawisata Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PBID.JK",
+    "name": "Panca Budi Idaman Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PBSA.JK",
+    "name": "Paramita Bangun Sarana Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PCAR.JK",
+    "name": "Prima Cakrawala Abadi Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PDPP.JK",
+    "name": "Primadaya Plastisindo Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PEHA.JK",
+    "name": "Phapros Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PEVE.JK",
+    "name": "Penta Valent Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PGAS.JK",
+    "name": "Perusahaan Gas Negara Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PGEO.JK",
+    "name": "Pertamina Geothermal Energy Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PGLI.JK",
+    "name": "Pembangunan Graha Lestari Indah Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PGUN.JK",
+    "name": "Pradiksi Gunatama Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PICO.JK",
+    "name": "Pelangi Indah Canindo Tbk",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PIPA.JK",
+    "name": "Multi Makmur Lemindo Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PJAA.JK",
+    "name": "Pembangunan Jaya Ancol Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PKPK.JK",
+    "name": "Perdana Karya Perkasa Tbk",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PLIN.JK",
+    "name": "Plaza Indonesia Realty Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PMJS.JK",
+    "name": "Putra Mandiri Jembar Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PNBS.JK",
+    "name": "Bank Panin Dubai Syariah Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PNGO.JK",
+    "name": "Pinago Utama Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PNSE.JK",
+    "name": "Pudjiadi & Sons Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "POLI.JK",
+    "name": "Pollux Hotels Group Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "POLU.JK",
+    "name": "Golden Flower Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PORT.JK",
+    "name": "Nusantara Pelabuhan Handal Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "POWR.JK",
+    "name": "Cikarang Listrindo Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PPRE.JK",
+    "name": "PP Presisi Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PPRI.JK",
+    "name": "Paperocks Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PRAY.JK",
+    "name": "Famon Awal Bros Sedaya Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PRDA.JK",
+    "name": "Prodia Widyahusada Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PRIM.JK",
+    "name": "Royal Prima Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PSAB.JK",
+    "name": "J Resources Asia Pasifik Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PSDN.JK",
+    "name": "Prasidha Aneka Niaga Tbk",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PSGO.JK",
+    "name": "Palma Serasih Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PSKT.JK",
+    "name": "Red Planet Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PSSI.JK",
+    "name": "IMC Pelita Logistik Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PTBA.JK",
+    "name": "Bukit Asam Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PTIS.JK",
+    "name": "Indo Straits Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PTMP.JK",
+    "name": "Mitra Pack Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PTMR.JK",
+    "name": "Master Print Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PTPP.JK",
+    "name": "PP (Persero) Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PTPS.JK",
+    "name": "Pulau Subur Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PTPW.JK",
+    "name": "Pratama Widya Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PTRO.JK",
+    "name": "Petrosea Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PTSN.JK",
+    "name": "Sat Nusapersada Tbk",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PTSP.JK",
+    "name": "Pioneerindo Gourmet International Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PURA.JK",
+    "name": "Putra Rajawali Kencana Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PURI.JK",
+    "name": "Puri Global Sukses Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PWON.JK",
+    "name": "Pakuwon Jati Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "PZZA.JK",
+    "name": "Sarimelati Kencana Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "RAAM.JK",
+    "name": "Tripar Multivision Plus Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "RAFI.JK",
+    "name": "Sari Kreasi Boga Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "RAJA.JK",
+    "name": "Rukun Raharja Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "RALS.JK",
+    "name": "Ramayana Lestari Sentosa Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "RANC.JK",
+    "name": "Supra Boga Lestari Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "RBMS.JK",
+    "name": "Ristia Bintang Mahkotasejati Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "RDTX.JK",
+    "name": "Roda Vivatex Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "REAL.JK",
+    "name": "Repower Asia Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "RGAS.JK",
+    "name": "Kian Santang Muliatama Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "RIGS.JK",
+    "name": "Rig Tenders Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "RISE.JK",
+    "name": "Jaya Sukses Makmur Sentosa Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "RMKE.JK",
+    "name": "RMK Energy Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "RMKO.JK",
+    "name": "Royaltama Mulia Kontraktorindo Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ROCK.JK",
+    "name": "Rockfields Properti Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "RODA.JK",
+    "name": "Pikko Land Development Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "RONY.JK",
+    "name": "Aesler Grup Internasional Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ROTI.JK",
+    "name": "Nippon Indosari Corpindo Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "RSCH.JK",
+    "name": "Charlie Hospital Semarang Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "RSGK.JK",
+    "name": "Kedoya Adyaraya Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "RUIS.JK",
+    "name": "Radiant Utama Interinsco Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SAFE.JK",
+    "name": "Steady Safe Tbk",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SAGE.JK",
+    "name": "Saptausaha Gemilangindah Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SAME.JK",
+    "name": "Sarana Meditama Metropolitan Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SAMF.JK",
+    "name": "Saraswanti Anugerah Makmur Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SAPX.JK",
+    "name": "Satria Antaran Prima Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SATU.JK",
+    "name": "Kota Satu Properti Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SBMA.JK",
+    "name": "Surya Biru Murni Acetylene Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SCCO.JK",
+    "name": "Supreme Cable Manufacturing & Commerce Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SCMA.JK",
+    "name": "Surya Citra Media Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SCNP.JK",
+    "name": "Selaras Citra Nusantara Perkasa Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SCPI.JK",
+    "name": "Organon Pharma Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SDMU.JK",
+    "name": "Sidomulyo Selaras Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SEMA.JK",
+    "name": "Semacom Integrated Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SGER.JK",
+    "name": "Sumber Global Energy Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SGRO.JK",
+    "name": "Sampoerna Agro Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SHID.JK",
+    "name": "Hotel Sahid Jaya International Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SICO.JK",
+    "name": "Sigma Energy Compressindo Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SIDO.JK",
+    "name": "Industri Jamu dan Farmasi Sido Muncul Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SILO.JK",
+    "name": "Siloam International Hospitals Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SIMP.JK",
+    "name": "Salim Ivomas Pratama Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SIPD.JK",
+    "name": "Sreeya Sewu Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SKBM.JK",
+    "name": "Sekar Bumi Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SKLT.JK",
+    "name": "Sekar Laut Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SKRN.JK",
+    "name": "Superkrane Mitra Utama Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SLIS.JK",
+    "name": "Gaya Abadi Sempurna Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SMAR.JK",
+    "name": "Smart Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SMBR.JK",
+    "name": "Semen Baturaja Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SMCB.JK",
+    "name": "Solusi Bangun Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SMDM.JK",
+    "name": "Suryamas Dutamakmur Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SMDR.JK",
+    "name": "Samudera Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SMGA.JK",
+    "name": "Sumber Mineral Global Abadi Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SMGR.JK",
+    "name": "Semen Indonesia (Persero) Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SMIL.JK",
+    "name": "Sarana Mitra Luas Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SMKL.JK",
+    "name": "Satyamitra Kemas Lestari Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SMLE.JK",
+    "name": "Sinergi Multi Lestarindo Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SMMT.JK",
+    "name": "Golden Eagle Energy Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SMRA.JK",
+    "name": "Summarecon Agung Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SMSM.JK",
+    "name": "Selamat Sempurna Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SNLK.JK",
+    "name": "Sunter Lakeside Hotel Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SOCI.JK",
+    "name": "Soechi Lines Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SOHO.JK",
+    "name": "Soho Global Health Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SOLA.JK",
+    "name": "Xolare RCR Energy Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SONA.JK",
+    "name": "Sona Topas Tourism Industry Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SOSS.JK",
+    "name": "Shield On Service Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SOTS.JK",
+    "name": "Satria Mega Kencana Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SPMA.JK",
+    "name": "Suparma Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SPTO.JK",
+    "name": "Surya Pertiwi Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SRAJ.JK",
+    "name": "Sejahteraraya Anugrahjaya Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SRTG.JK",
+    "name": "Saratoga Investama Sedaya Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SSIA.JK",
+    "name": "Surya Semesta Internusa Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SSTM.JK",
+    "name": "Sunson Textile Manufacture Tbk",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "STAA.JK",
+    "name": "Sumber Tani Agung Resources Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "STTP.JK",
+    "name": "Siantar Top Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SULI.JK",
+    "name": "SLJ Global Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SUNI.JK",
+    "name": "Sunindo Pratama Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SUPR.JK",
+    "name": "Solusi Tunas Pratama Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SURI.JK",
+    "name": "Maja Agung Latexindo Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "SWID.JK",
+    "name": "Saraswanti Indoland Development Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "TALF.JK",
+    "name": "Tunas Alfin Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "TAMA.JK",
+    "name": "Lancartama Sejati Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "TAMU.JK",
+    "name": "Pelayaran Tamarin Samudra Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "TAPG.JK",
+    "name": "Triputra Agro Persada Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "TARA.JK",
+    "name": "Agung Semesta Sejahtera Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "TAXI.JK",
+    "name": "Express Transindo Utama Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "TBMS.JK",
+    "name": "Tembaga Mulia Semanan Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "TCID.JK",
+    "name": "Mandom Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "TCPI.JK",
+    "name": "Transcoal Pacific Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "TEBE.JK",
+    "name": "Dana Brata Luhur Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "TFAS.JK",
+    "name": "Telefast Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "TFCO.JK",
+    "name": "Tifico Fiber Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "TGKA.JK",
+    "name": "Tigaraksa Satria Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "TGUK.JK",
+    "name": "Platinum Wahab Nusantara Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "TINS.JK",
+    "name": "Timah Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "TIRA.JK",
+    "name": "Tira Austenite Tbk",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "TIRT.JK",
+    "name": "Tirta Mahakam Resources Tbk",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "TKIM.JK",
+    "name": "Pabrik Kertas Tjiwi Kimia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "TLDN.JK",
+    "name": "Teladan Prima Agro Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "TLKM.JK",
+    "name": "Telkom Indonesia (Persero) Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "TMAS.JK",
+    "name": "Temas Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "TMPO.JK",
+    "name": "Tempo Intimedia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "TNCA.JK",
+    "name": "Trimuda Nuansa Citra Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "TOBA.JK",
+    "name": "TBS Energi Utama Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "TOOL.JK",
+    "name": "Rohartindo Nusantara Luas Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "TOPS.JK",
+    "name": "Totalindo Eka Persada Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "TOSK.JK",
+    "name": "Topindo Solusi Komunika Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "TOTL.JK",
+    "name": "Total Bangun Persada Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "TOTO.JK",
+    "name": "Surya Toto Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "TPIA.JK",
+    "name": "Chandra Asri Pacific Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "TPMA.JK",
+    "name": "Trans Power Marine Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "TRIS.JK",
+    "name": "Trisula International Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "TRON.JK",
+    "name": "Teknologi Karya Digital Nusa Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "TRST.JK",
+    "name": "Trias Sentosa Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "TRUE.JK",
+    "name": "Triniti Dinamik Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "TRUK.JK",
+    "name": "Guna Timur Raya Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "TSPC.JK",
+    "name": "Tempo Scan Pacific Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "TYRE.JK",
+    "name": "King Tire Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "UANG.JK",
+    "name": "Pakuan Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "UCID.JK",
+    "name": "Uni-Charm Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "UFOE.JK",
+    "name": "Damai Sejahtera Abadi Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ULTJ.JK",
+    "name": "Ultrajaya Milk Industry & Trading Company Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "UNIC.JK",
+    "name": "Unggul Indah Cahaya Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "UNIQ.JK",
+    "name": "Ulima Nitra Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "UNTD.JK",
+    "name": "Terang Dunia Internusa Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "UNTR.JK",
+    "name": "United Tractors Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "UNVR.JK",
+    "name": "Unilever Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "UVCR.JK",
+    "name": "Trimegah Karya Pratama Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "VAST.JK",
+    "name": "Vastland Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "VERN.JK",
+    "name": "Verona Indah Pictures Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "VICI.JK",
+    "name": "Victoria Care Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "VISI.JK",
+    "name": "Satu Visi Putra Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "VKTR.JK",
+    "name": "VKTR Teknologi Mobilitas Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "VOKS.JK",
+    "name": "Voksel Electric Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "WAPO.JK",
+    "name": "Wahana Pronatural Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "WEGE.JK",
+    "name": "Wijaya Karya Bangunan Gedung Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "WEHA.JK",
+    "name": "WEHA Transportasi Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "WIFI.JK",
+    "name": "Solusi Sinergi Digital Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "WINR.JK",
+    "name": "Winner Nusantara Jaya Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "WINS.JK",
+    "name": "Wintermar Offshore Marine Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "WIRG.JK",
+    "name": "WIR ASIA Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "WMUU.JK",
+    "name": "Widodo Makmur Unggas Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "WOOD.JK",
+    "name": "Integra Indocabinet Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "WOWS.JK",
+    "name": "Ginting Jaya Energi Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "WTON.JK",
+    "name": "Wijaya Karya Beton Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "YELO.JK",
+    "name": "Yelooo Integra Datanet Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "YPAS.JK",
+    "name": "Yanaprima Hastapersada Tbk",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ZATA.JK",
+    "name": "Bersama Zatta Jaya Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ZBRA.JK",
+    "name": "Dosni Roha Indonesia Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ZONE.JK",
+    "name": "Mega Perintis Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  },
+  {
+    "symbol": "ZYRX.JK",
+    "name": "Zyrexindo Mandiri Buana Tbk.",
+    "ema_short": null,
+    "ema_long": null,
+    "rsi": null
+  }
+]
