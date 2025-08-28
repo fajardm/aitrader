@@ -9,9 +9,9 @@
   {
     "symbol": "AALI.JK",
     "name": "Astra Agro Lestari Tbk.",
-    "ema_short": null,
-    "ema_long": null,
-    "rsi": null
+    "ema_short": 10,
+    "ema_long": 62,
+    "rsi": 11
   },
   {
     "symbol": "ACES.JK",
@@ -184,9 +184,9 @@
   {
     "symbol": "ANTM.JK",
     "name": "Aneka Tambang Tbk.",
-    "ema_short": null,
-    "ema_long": null,
-    "rsi": null
+    "ema_short": 12,
+    "ema_long": 62,
+    "rsi": 17
   },
   {
     "symbol": "APII.JK",
@@ -653,9 +653,9 @@
   {
     "symbol": "BRMS.JK",
     "name": "Bumi Resources Minerals Tbk.",
-    "ema_short": null,
-    "ema_long": null,
-    "rsi": null
+    "ema_short": 11,
+    "ema_long": 63,
+    "rsi": 9
   },
   {
     "symbol": "BRRC.JK",
@@ -702,9 +702,9 @@
   {
     "symbol": "BTPS.JK",
     "name": "Bank BTPN Syariah Tbk.",
-    "ema_short": null,
-    "ema_long": null,
-    "rsi": null
+    "ema_short": 16,
+    "ema_long": 57,
+    "rsi": 9
   },
   {
     "symbol": "BUAH.JK",
@@ -1220,9 +1220,9 @@
   {
     "symbol": "EMTK.JK",
     "name": "Elang Mahkota Teknologi Tbk.",
-    "ema_short": null,
-    "ema_long": null,
-    "rsi": null
+    "ema_short": 13,
+    "ema_long": 63,
+    "rsi": 8
   },
   {
     "symbol": "ENAK.JK",
@@ -1318,9 +1318,9 @@
   {
     "symbol": "FILM.JK",
     "name": "MD Entertainment Tbk.",
-    "ema_short": null,
-    "ema_long": null,
-    "rsi": null
+    "ema_short": 27,
+    "ema_long": 66,
+    "rsi": 17
   },
   {
     "symbol": "FIRE.JK",
@@ -1787,9 +1787,9 @@
   {
     "symbol": "IMPC.JK",
     "name": "Impack Pratama Industri Tbk.",
-    "ema_short": null,
-    "ema_long": null,
-    "rsi": null
+    "ema_short": 19,
+    "ema_long": 67,
+    "rsi": 17
   },
   {
     "symbol": "INCI.JK",
@@ -2487,9 +2487,9 @@
   {
     "symbol": "MDKA.JK",
     "name": "Merdeka Copper Gold Tbk.",
-    "ema_short": null,
-    "ema_long": null,
-    "rsi": null
+    "ema_short": 16,
+    "ema_long": 48,
+    "rsi": 10
   },
   {
     "symbol": "MDKI.JK",
@@ -2816,9 +2816,9 @@
   {
     "symbol": "NCKL.JK",
     "name": "Trimegah Bangun Persada Tbk.",
-    "ema_short": null,
-    "ema_long": null,
-    "rsi": null
+    "ema_short": 13,
+    "ema_long": 70,
+    "rsi": 11
   },
   {
     "symbol": "NELY.JK",
@@ -3243,9 +3243,9 @@
   {
     "symbol": "PTRO.JK",
     "name": "Petrosea Tbk.",
-    "ema_short": null,
-    "ema_long": null,
-    "rsi": null
+    "ema_short": 26,
+    "ema_long": 70,
+    "rsi": 15
   },
   {
     "symbol": "PTSN.JK",
@@ -4237,9 +4237,9 @@
   {
     "symbol": "WIFI.JK",
     "name": "Solusi Sinergi Digital Tbk.",
-    "ema_short": null,
-    "ema_long": null,
-    "rsi": null
+    "ema_short": 14,
+    "ema_long": 54,
+    "rsi": 17
   },
   {
     "symbol": "WINR.JK",
@@ -4258,9 +4258,9 @@
   {
     "symbol": "WIRG.JK",
     "name": "WIR ASIA Tbk.",
-    "ema_short": null,
-    "ema_long": null,
-    "rsi": null
+    "ema_short": 19,
+    "ema_long": 35,
+    "rsi": 21
   },
   {
     "symbol": "WMUU.JK",
@@ -4331,5 +4331,19 @@
     "ema_short": null,
     "ema_long": null,
     "rsi": null
+  },
+  {
+    "symbol": "BRPT.JK",
+    "name": "BRPT.JK",
+    "ema_short": 18,
+    "ema_long": 66,
+    "rsi": 20
+  },
+  {
+    "symbol": "CUAN.JK",
+    "name": "CUAN.JK",
+    "ema_short": 27,
+    "ema_long": 51,
+    "rsi": 10
   }
 ]

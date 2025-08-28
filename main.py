@@ -459,13 +459,13 @@ def run_optuna(raw_df, equity, risk_pct, use_llm, n_trials):
 def backtest(args):
     # Load raw OHLCV
     list_tickers = load_ticker('./issi.json')
-    raw = load_ohlcv(args.ticker, args.start)
-    ticker = next((t for t in list_tickers if t.symbol == args.ticker), None)
+    raw = load_ohlcv(args.tickers[0], args.start)
+    ticker = next((t for t in list_tickers if t.symbol == args.tickers[0]), None)
     df = build_dataset(raw, ticker)
 
     # Start index after indicators are warmed up
     start_idx = 0
-    result = simulate(df, ticker=args.ticker, start_idx=start_idx, init_equity=args.equity, risk_pct=args.risk, use_llm=(not args.no_llm))
+    result = simulate(df, ticker=ticker.symbol, start_idx=start_idx, init_equity=args.equity, risk_pct=args.risk, use_llm=(not args.no_llm))
 
     metrics = result['metrics']
     trades_df = result['trades_df']
@@ -482,14 +482,13 @@ def backtest(args):
         print("No trades generated.")
 
     if args.plots:
-        plot_results(args.ticker, df, equity_curve, trades_df)    
+        plot_results(ticker.symbol, df, equity_curve, trades_df)
 
 def live_signal_loop(args):
     while True:
-        tickers = load_ticker('./issi.json')
-        if args.ticker is not None:
-            tickers = [TickerParam(args.ticker, args.ticker, 20, 50, 14)]
-
+        all_tickers = load_ticker('./issi.json')
+        tickers = [t for t in all_tickers if args.tickers is None or t.symbol in args.tickers]
+        
         for ticker in tickers:
             raw = load_ohlcv(ticker.symbol, args.start)
             df = build_dataset(raw, ticker)
@@ -527,12 +526,33 @@ def live_signal_loop(args):
         # Wait 15 minutes before checking again
         time.sleep(900)
 
+def optimize(args):
+        all_tickers = load_ticker('./issi.json')
+        # Determine which tickers to optimize
+        ticker_names = args.tickers if args.tickers is not None else [t.symbol for t in all_tickers]
+        # Ensure all tickers in ticker_names exist in all_tickers
+        symbol_to_ticker = {t.symbol: t for t in all_tickers}
+        for ticker_name in ticker_names:
+            ticker = symbol_to_ticker.get(ticker_name)
+            if ticker is None:
+                ticker = TickerParam(ticker_name, ticker_name, 20, 50, 14)
+                all_tickers.append(ticker)
+                symbol_to_ticker[ticker_name] = ticker
+            df = load_ohlcv(ticker.symbol, args.start)
+            study = run_optuna(df, args.equity, args.risk, not args.no_llm, n_trials=500)
+            ticker.ema_short = study.best_params['EMA_SHORT']
+            ticker.ema_long = study.best_params['EMA_LONG']
+            ticker.rsi = study.best_params['RSI']
+
+        with open('./issi.json', 'w', encoding='utf-8') as f:
+            json.dump([t.__dict__ for t in all_tickers], f, indent=2)
+
 def main():
     # set -start to a year from now if not provided
     one_year_ago = pd.Timestamp.now() - pd.DateOffset(years=1)
 
     parser = argparse.ArgumentParser()
-    parser.add_argument('--ticker', type=str)
+    parser.add_argument('--tickers', nargs='+', type=str, help='List of tickers to optimize (space separated)')
     parser.add_argument('--start', type=str, default=one_year_ago)
     parser.add_argument('--equity', type=float, default=100_000_000)
     parser.add_argument('--risk', type=float, default=1.0, help='Risk per trade in % of equity')
@@ -544,33 +564,7 @@ def main():
     args = parser.parse_args()
 
     if args.optimize:
-        all_tickers = load_ticker('./issi.json')
-        if args.ticker is not None:
-            # Find the ticker in all_tickers
-            target = next((t for t in all_tickers if t.symbol == args.ticker), None)
-            if target is None:
-                # If not found, create a new one and add to the list
-                target = TickerParam(args.ticker, args.ticker, 20, 50, 14)
-                all_tickers.append(target)
-            df = load_ohlcv(target.symbol, args.start)
-            study = run_optuna(df, args.equity, args.risk, not args.no_llm, n_trials=500)
-            target.ema_short = study.best_params['EMA_SHORT']
-            target.ema_long = study.best_params['EMA_LONG']
-            target.rsi = study.best_params['RSI']
-        else:
-            # Optimize all tickers
-            for ticker in all_tickers:
-                print(f"Optimizing {ticker.symbol}...")
-                df = load_ohlcv(ticker.symbol, args.start)
-                study = run_optuna(df, args.equity, args.risk, not args.no_llm, n_trials=500)
-                ticker.ema_short = study.best_params['EMA_SHORT']
-                ticker.ema_long = study.best_params['EMA_LONG']
-                ticker.rsi = study.best_params['RSI']
-
-        # Save all tickers back to issi.json
-        with open('./issi.json', 'w') as f:
-            json.dump([t.__dict__ for t in all_tickers], f, indent=2)
-
+        optimize(args)
         return
 
     if args.backtest:
