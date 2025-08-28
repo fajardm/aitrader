@@ -193,10 +193,14 @@ def fallback_decision(row: pd.Series) -> Dict[str, Any]:
     ema_diff = row.EMA_SHORT - row.EMA_LONG
     confidence = 50 + min(40, max(0, ema_diff / row.Close * 100)) + min(10, max(0, (row.RSI - 50) / 5))
 
+    # Percentage stop loss
+    stop_loss_pct = round(100 * abs(zone_1 - sl) / zone_1, 2) if zone_1 != 0 else None
+
     return {
         "regime": regime,
         "enter": {"type": "limit", "prices": [float(zone_1), float(zone_2)]},
         "stop_loss": sl,
+        "stop_loss_pct": stop_loss_pct,
         "take_profits": [tp1, tp2, tp3],
         "position_size_pct": round(position_size_pct, 2),
         "confidence": round(float(confidence), 2),
