@@ -359,13 +359,14 @@ def live_signals_page(tickers, ticker_symbols):
                                 zone_high = float(max(prices))
                                 
                                 is_actionable = latest_row.High >= zone_low and latest_row.Low <= zone_high
+                                recommended_price = float(max(latest_row.Low, zone_low))
                                 
                                 signals_data.append({
                                     'Ticker': ticker_symbol,
                                     'Date': target_date,
                                     'Regime': decision.get('regime', 'N/A'),
                                     'Entry Type': entry_plan.get('type', 'N/A'),
-                                    'Entry Zone': f"{zone_low:.2f} - {zone_high:.2f}",
+                                    'Entry Zone': f"{zone_low:.2f} - {zone_high:.2f} ({recommended_price:.2f})",
                                     'Stop Loss': f"{decision.get('stop_loss', 0):.2f}",
                                     'Stop Loss %': f"{decision.get('stop_loss_pct', 0):.2f}%",
                                     'Position Size': f"{decision.get('position_size_pct', 0):.2f}%",
