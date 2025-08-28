@@ -1,0 +1,10 @@
+# Railway Deployment Configuration
+
+[build]
+builder = "NIXPACKS"
+
+[deploy]
+startCommand = "streamlit run ui.py --server.headless true --server.port $PORT --server.address 0.0.0.0"
+
+[env]
+PYTHON_VERSION = "3.11"
