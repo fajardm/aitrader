@@ -300,11 +300,7 @@ def live_signals_page(tickers, ticker_symbols):
     col1, col2 = st.columns([1, 1])
     
     with col1:
-        selected_tickers = st.multiselect(
-            "Select Tickers", 
-            ticker_symbols, 
-            default=ticker_symbols[:5] if len(ticker_symbols) > 5 else ticker_symbols
-        )
+        selected_tickers = st.multiselect("Select Tickers", ticker_symbols)
         target_date = st.date_input("Target Date", value=datetime.now() - timedelta(days=1))
     
     with col2:
@@ -499,11 +495,7 @@ def portfolio_analysis_page(tickers, ticker_symbols):
     st.header("📊 Portfolio Analysis")
     
     # Parameters
-    selected_tickers = st.multiselect(
-        "Select Portfolio Tickers", 
-        ticker_symbols,
-        default=ticker_symbols[:10] if len(ticker_symbols) > 10 else ticker_symbols
-    )
+    selected_tickers = st.multiselect("Select Portfolio Tickers", ticker_symbols)
     
     col1, col2 = st.columns([1, 1])
     with col1:
