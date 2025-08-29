@@ -177,12 +177,12 @@ def fallback_decision(row: pd.Series) -> Dict[str, Any]:
     if regime not in ("trend_up", "ranging"):
         return {"regime": "no_trade"}
 
-    zone_1 = float(min(row.Pullback_EMA_SHORT, row.Pullback_ATR))
-    zone_2 = float(max(row.Pullback_EMA_SHORT, row.Pullback_ATR))
+    zone_1 = round(min(row.Pullback_EMA_SHORT, row.Pullback_ATR))
+    zone_2 = round(max(row.Pullback_EMA_SHORT, row.Pullback_ATR))
     atr_mult = 1.5 if regime == "trend_up" else 1.0
-    sl = float(zone_1 - atr_mult * row.ATR if not np.isnan(row.ATR) else zone_1 * 0.97)
+    sl = round(zone_1 - atr_mult * row.ATR if not np.isnan(row.ATR) else zone_1 * 0.97)
     r = max(zone_1 - sl, 1e-6)
-    tp1, tp2, tp3 = zone_1 + 1 * r, zone_1 + 2 * r, zone_1 + 3 * r
+    tp1, tp2, tp3 = round(zone_1 + 1 * r), round(zone_1 + 2 * r), round(zone_1 + 3 * r)
 
     # position_size_pct: semakin kecil ATR, semakin besar size (maks 20%)
     base_size = 10.0
@@ -198,7 +198,7 @@ def fallback_decision(row: pd.Series) -> Dict[str, Any]:
 
     return {
         "regime": regime,
-        "enter": {"type": "limit", "prices": [float(zone_1), float(zone_2)]},
+        "enter": {"type": "limit", "prices": [zone_1, zone_2]},
         "stop_loss": sl,
         "stop_loss_pct": stop_loss_pct,
         "take_profits": [tp1, tp2, tp3],
