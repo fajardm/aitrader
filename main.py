@@ -301,7 +301,7 @@ def simulate(df: pd.DataFrame, ticker: str, start_idx: int, init_equity: float, 
                     zone_high = float(max(prices))
                     # Entry jika harga hari berikutnya overlap dengan zona entry
                     if nxt['High'] >= zone_low and nxt['Low'] <= zone_high:
-                        entry_px = max(nxt['Low'], zone_low)
+                        entry_px = zone_low
                         sl_px = float(decision['stop_loss'])
                         tp1, tp2, tp3 = [float(x) for x in decision['take_profits']]
                         qty = position_qty(equity, entry_px, sl_px, risk_pct)

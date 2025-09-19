@@ -184,9 +184,9 @@
   {
     "symbol": "ANTM.JK",
     "name": "Aneka Tambang Tbk.",
-    "ema_short": 12,
-    "ema_long": 62,
-    "rsi": 17
+    "ema_short": 30,
+    "ema_long": 56,
+    "rsi": 21
   },
   {
     "symbol": "APII.JK",
@@ -653,8 +653,8 @@
   {
     "symbol": "BRMS.JK",
     "name": "Bumi Resources Minerals Tbk.",
-    "ema_short": 11,
-    "ema_long": 63,
+    "ema_short": 30,
+    "ema_long": 43,
     "rsi": 9
   },
   {
@@ -702,9 +702,9 @@
   {
     "symbol": "BTPS.JK",
     "name": "Bank BTPN Syariah Tbk.",
-    "ema_short": 16,
-    "ema_long": 57,
-    "rsi": 9
+    "ema_short": 30,
+    "ema_long": 51,
+    "rsi": 18
   },
   {
     "symbol": "BUAH.JK",
@@ -1220,7 +1220,7 @@
   {
     "symbol": "EMTK.JK",
     "name": "Elang Mahkota Teknologi Tbk.",
-    "ema_short": 13,
+    "ema_short": 28,
     "ema_long": 63,
     "rsi": 8
   },
@@ -1318,9 +1318,9 @@
   {
     "symbol": "FILM.JK",
     "name": "MD Entertainment Tbk.",
-    "ema_short": 27,
-    "ema_long": 66,
-    "rsi": 17
+    "ema_short": 19,
+    "ema_long": 35,
+    "rsi": 21
   },
   {
     "symbol": "FIRE.JK",
@@ -1787,8 +1787,8 @@
   {
     "symbol": "IMPC.JK",
     "name": "Impack Pratama Industri Tbk.",
-    "ema_short": 19,
-    "ema_long": 67,
+    "ema_short": 15,
+    "ema_long": 43,
     "rsi": 17
   },
   {
@@ -2487,9 +2487,9 @@
   {
     "symbol": "MDKA.JK",
     "name": "Merdeka Copper Gold Tbk.",
-    "ema_short": 16,
-    "ema_long": 48,
-    "rsi": 10
+    "ema_short": 30,
+    "ema_long": 67,
+    "rsi": 18
   },
   {
     "symbol": "MDKI.JK",
@@ -2816,8 +2816,8 @@
   {
     "symbol": "NCKL.JK",
     "name": "Trimegah Bangun Persada Tbk.",
-    "ema_short": 13,
-    "ema_long": 70,
+    "ema_short": 19,
+    "ema_long": 39,
     "rsi": 11
   },
   {
@@ -3243,9 +3243,9 @@
   {
     "symbol": "PTRO.JK",
     "name": "Petrosea Tbk.",
-    "ema_short": 26,
-    "ema_long": 70,
-    "rsi": 15
+    "ema_short": 28,
+    "ema_long": 43,
+    "rsi": 7
   },
   {
     "symbol": "PTSN.JK",
@@ -4237,9 +4237,9 @@
   {
     "symbol": "WIFI.JK",
     "name": "Solusi Sinergi Digital Tbk.",
-    "ema_short": 14,
-    "ema_long": 54,
-    "rsi": 17
+    "ema_short": 29,
+    "ema_long": 64,
+    "rsi": 19
   },
   {
     "symbol": "WINR.JK",
@@ -4342,8 +4342,8 @@
   {
     "symbol": "CUAN.JK",
     "name": "CUAN.JK",
-    "ema_short": 27,
-    "ema_long": 51,
-    "rsi": 10
+    "ema_short": 30,
+    "ema_long": 35,
+    "rsi": 21
   }
 ]
