@@ -347,27 +347,25 @@ def live_signals_page(tickers, ticker_symbols):
                         
                         # Check if signal is actionable
                         latest_row = df.iloc[-1]
-                        if decision.get('enter'):
+                        zone_low = decision['zone']['low']
+                        zone_high = decision['zone']['high']
+                        
+                        if latest_row.High >= zone_low and latest_row.Low <= zone_high:
                             entry_plan = decision['enter']
-                            prices = entry_plan.get('prices', [])
-                            if prices:
-                                zone_low = float(min(prices))
-                                zone_high = float(max(prices))
-                                is_actionable = latest_row.High >= zone_low and latest_row.Low <= zone_high
-                                
-                                signals_data.append({
-                                    'Ticker': ticker_symbol,
-                                    'Date': target_date,
-                                    'Regime': decision.get('regime', 'N/A'),
-                                    'Entry Type': entry_plan.get('type', 'N/A'),
-                                    'Entry Price': f"{zone_low:.2f}",
-                                    'Stop Loss': f"{decision.get('stop_loss', 0):.2f} ({decision.get('stop_loss_pct', 0):.2f}%)",
-                                    'Take Profits': f"{decision.get('take_profits', [])}",
-                                    'Position Size': f"{decision.get('position_size_pct', 0):.2f}%",
-                                    'Confidence': f"{decision.get('confidence', 0):.2f}%",
-                                    'Actionable': f'🟢 Yes' if is_actionable else '🔴 No',
-                                    'Current Price': f"{latest_row.Close:.2f}"
-                                })
+                            price = entry_plan.get('price', None)
+                            
+                            signals_data.append({
+                                'Ticker': ticker_symbol,
+                                'Date': target_date,
+                                'Regime': decision.get('regime', 'N/A'),
+                                'Entry Type': entry_plan.get('type', 'N/A'),
+                                'Entry Price': f"{price:.2f}",
+                                'Stop Loss': f"{decision.get('stop_loss', 0):.2f} ({decision.get('stop_loss_pct', 0):.2f}%)",
+                                'Take Profits': f"{decision.get('take_profits', [])}",
+                                'Position Size': f"{decision.get('position_size_pct', 0):.2f}%",
+                                'Confidence': f"{decision.get('confidence', 0):.2f}%",
+                                'Current Price': f"{latest_row.Close:.2f}"
+                            })
                     
                     progress_bar.progress((i + 1) / len(selected_tickers))
                     

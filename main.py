@@ -198,7 +198,8 @@ def fallback_decision(row: pd.Series) -> Dict[str, Any]:
 
     return {
         "regime": regime,
-        "enter": {"type": "limit", "prices": [zone_1, zone_2]},
+        "zone": {"low": zone_1, "high": zone_2},
+        "enter": {"type": "limit", "price": zone_1},
         "stop_loss": sl,
         "stop_loss_pct": stop_loss_pct,
         "take_profits": [tp1, tp2, tp3],
@@ -295,19 +296,16 @@ def simulate(df: pd.DataFrame, ticker: str, start_idx: int, init_equity: float, 
                 entry_date = nxt.name
                 in_pos = qty > 0
             else:
-                prices = entry_plan.get('prices', None)
-                if prices and isinstance(prices, (list, tuple)) and len(prices) == 2:
-                    zone_low = float(min(prices))
-                    zone_high = float(max(prices))
-                    # Entry jika harga hari berikutnya overlap dengan zona entry
-                    if nxt['High'] >= zone_low and nxt['Low'] <= zone_high:
-                        entry_px = zone_low
-                        sl_px = float(decision['stop_loss'])
-                        tp1, tp2, tp3 = [float(x) for x in decision['take_profits']]
-                        qty = position_qty(equity, entry_px, sl_px, risk_pct)
-                        entry_date = nxt.name
-                        in_pos = qty > 0
-
+                zone_low = decision['zone']['low']
+                zone_high = decision['zone']['high']
+                # Entry jika harga hari berikutnya overlap dengan zona entry
+                if nxt['High'] >= zone_low and nxt['Low'] <= zone_high:
+                    entry_px = zone_low
+                    sl_px = float(decision['stop_loss'])
+                    tp1, tp2, tp3 = [float(x) for x in decision['take_profits']]
+                    qty = position_qty(equity, entry_px, sl_px, risk_pct)
+                    entry_date = nxt.name
+                    in_pos = qty > 0
     # finalize equity curve with last close
     if len(df) > 0:
         last_close = df.iloc[-1]['Close']
@@ -496,36 +494,26 @@ def live_signal_loop(args):
         for ticker in tickers:
             raw = load_ohlcv(ticker.symbol, args.start)
             df = build_dataset(raw, ticker)
-            
-            target_date = None
-            if args.last_date:
-                target_date = pd.to_datetime(args.last_date)
-            else:
-                target_date = (pd.Timestamp.now() - pd.Timedelta(days=1)).normalize() # default is yesterday
-            # Find row with index == target_date
-            row = df[df.index.normalize() == target_date]
-            selected_row = None
-            if not row.empty:
-                selected_row = row.iloc[0]
+            prevday = df.iloc[-2]
+            currentday = df.iloc[-1]
 
-            # Generate signal for the latest bar
+            is_currentday_valid = currentday.name.date() != pd.Timestamp.now().date()
+            if is_currentday_valid:
+               prevday = currentday
+
             if not args.no_llm:
-                prompt = render_prompt(selected_row, ticker=ticker.symbol, risk_pct=args.risk)
+                prompt = render_prompt(prevday, ticker=ticker.symbol, risk_pct=args.risk)
                 decision = call_llm(prompt)
             else:
-                decision = fallback_decision(selected_row)
+                decision = fallback_decision(prevday)
 
-            entry_plan = decision['enter']
-            prices = entry_plan.get('prices', None)
-            zone_low = float(min(prices))
-            zone_high = float(max(prices))
-            latest_row = df.iloc[-1]
-    
-            if latest_row.High >= zone_low and latest_row.Low <= zone_high:
+            zone_low = decision['zone']['low']
+            zone_high = decision['zone']['high']
+
+            if is_currentday_valid and currentday.High >= zone_low and currentday.Low <= zone_high:
                 decision['enter']['type'] = 'market'
-                decision['enter']['action_price'] = float(max(latest_row.Low, zone_low))
 
-            print(f"{ticker.symbol} [{selected_row.name.date()}] Signal: {decision}")
+            print(f"{ticker.symbol} [{prevday.name.date()}] Signal: {decision}")
 
         # Wait 15 minutes before checking again
         time.sleep(900)
@@ -564,7 +552,6 @@ def main():
     parser.add_argument('--no-llm', action='store_true', help='Disable LLM and use fallback only')
     parser.add_argument('--optimize', action='store_true', help='Run Optuna parameter optimization')
     parser.add_argument('--backtest', action='store_true', help='Run backtest')
-    parser.add_argument('--last-date', type=str, default=None, help='Last date to consider for live trading')
     args = parser.parse_args()
 
     if args.optimize:
