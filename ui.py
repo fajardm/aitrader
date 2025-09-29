@@ -376,6 +376,7 @@ def live_signals_page(tickers, ticker_symbols):
                             'Ticker': ticker_symbol,
                             'Last Date': currentday.name.date(),
                             'Regime': decision.get('regime', 'N/A'),
+                            'Zone': f"{zone_low:.2f} - {zone_high:.2f}",
                             'Entry Type': entry_plan.get('type', 'N/A'),
                             'Entry Price': f"{price:.2f}",
                             'Stop Loss': f"{decision.get('stop_loss', 0):.2f} ({decision.get('stop_loss_pct', 0):.2f}%)",
