@@ -280,7 +280,8 @@ def simulate(df: pd.DataFrame, ticker: str, start_idx: int, init_equity: float, 
             if exited:
                 qty = 0.0
                 entry_date = None
-                continue
+                continue # proceed to next day after exit
+            continue # still in position, skip to next day
 
         # If flat, ask LLM (or fallback) for a plan
         decision = None
@@ -311,7 +312,6 @@ def simulate(df: pd.DataFrame, ticker: str, start_idx: int, init_equity: float, 
                     qty = position_qty(equity, entry_px, sl_px, risk_pct)
                     entry_date = nxt.name
                     in_pos = qty > 0
-                    print(f"Entered {ticker} @ {entry_px} on {entry_date.date()} qty={qty:.1f} equity={equity:.1f}")
                     
     # finalize equity curve with last close
     if len(df) > 0:
