@@ -25,6 +25,9 @@ from main import (
     optuna_objective
 )
 
+# Import watchlist configuration
+from watchlist_config import get_watchlist, get_all_watchlists, get_watchlist_names
+
 # Page configuration
 st.set_page_config(
     page_title="AI Trader",
@@ -296,11 +299,28 @@ def backtest_page(tickers, ticker_symbols):
 def live_signals_page(tickers, ticker_symbols):
     st.header("🎯 Live Trading Signals")
     
+    # Watchlist selection
+    st.subheader("📋 Watchlist Selection")
+    col_w1, col_w2 = st.columns([1, 1])
+    
+    with col_w1:
+        watchlist_name = st.selectbox("Choose Watchlist", get_watchlist_names(), index=0)
+        default_tickers = get_watchlist(watchlist_name)
+        # Filter to only include tickers that exist in our configuration
+        default_tickers = [t for t in default_tickers if t in ticker_symbols]
+    
+    with col_w2:
+        st.info(f"📊 {watchlist_name.title()} watchlist: {len(default_tickers)} tickers")
+    
     # Parameters
     col1, col2 = st.columns([1, 1])
     
     with col1:
-        selected_tickers = st.multiselect("Select Tickers", ticker_symbols)
+        selected_tickers = st.multiselect(
+            "Select Tickers", 
+            ticker_symbols, 
+            default=default_tickers
+        )
     
     with col2:
         risk_pct = st.slider("Risk per Trade (%)", min_value=0.1, max_value=5.0, value=1.0, step=0.1)
@@ -341,6 +361,9 @@ def live_signals_page(tickers, ticker_symbols):
                         decision = call_llm(prompt)
                     else:
                         decision = fallback_decision(prevday)
+
+                    if decision['regime'] == 'no_trade':
+                        continue
                         
                     zone_low = decision['zone']['low']
                     zone_high = decision['zone']['high']
@@ -391,11 +414,28 @@ def live_signals_page(tickers, ticker_symbols):
 def optimization_page(tickers, ticker_symbols):
     st.header("⚙️ Parameter Optimization")
     
+    # Watchlist selection
+    st.subheader("📋 Watchlist Selection")
+    col_w1, col_w2 = st.columns([1, 1])
+    
+    with col_w1:
+        watchlist_name = st.selectbox("Choose Watchlist", get_watchlist_names(), index=0)
+        default_tickers = get_watchlist(watchlist_name)
+        # Filter to only include tickers that exist in our configuration
+        default_tickers = [t for t in default_tickers if t in ticker_symbols]
+    
+    with col_w2:
+        st.info(f"📊 {watchlist_name.title()} watchlist: {len(default_tickers)} tickers")
+    
     # Parameters
     col1, col2 = st.columns([1, 1])
     
     with col1:
-        selected_tickers = st.multiselect("Select Tickers to Optimize", ticker_symbols)
+        selected_tickers = st.multiselect(
+            "Select Tickers to Optimize", 
+            ticker_symbols, 
+            default=default_tickers
+        )
         n_trials = st.slider("Number of Trials", min_value=10, max_value=1000, value=100, step=10)
         equity = st.number_input("Equity for Testing", value=100_000_000, step=1000000)
     
@@ -480,8 +520,25 @@ def optimization_page(tickers, ticker_symbols):
 def portfolio_analysis_page(tickers, ticker_symbols):
     st.header("📊 Portfolio Analysis")
     
+    # Watchlist selection
+    st.subheader("📋 Watchlist Selection")
+    col_w1, col_w2 = st.columns([1, 1])
+    
+    with col_w1:
+        watchlist_name = st.selectbox("Choose Watchlist", get_watchlist_names(), index=0)
+        default_tickers = get_watchlist(watchlist_name)
+        # Filter to only include tickers that exist in our configuration
+        default_tickers = [t for t in default_tickers if t in ticker_symbols]
+    
+    with col_w2:
+        st.info(f"📊 {watchlist_name.title()} watchlist: {len(default_tickers)} tickers")
+    
     # Parameters
-    selected_tickers = st.multiselect("Select Portfolio Tickers", ticker_symbols)
+    selected_tickers = st.multiselect(
+        "Select Portfolio Tickers", 
+        ticker_symbols, 
+        default=default_tickers
+    )
     
     col1, col2 = st.columns([1, 1])
     with col1:
@@ -589,7 +646,95 @@ def portfolio_analysis_page(tickers, ticker_symbols):
 def settings_page(tickers):
     st.header("🔧 Settings")
     
-    tab1, tab2, tab3 = st.tabs(["📋 Ticker Management", "🔑 API Settings", "📁 Data Management"])
+    tab1, tab2, tab3, tab4 = st.tabs(["📋 Ticker Management", "� Watchlist Management", "�🔑 API Settings", "📁 Data Management"])
+    
+    with tab2:
+        st.subheader("Watchlist Management")
+        
+        # Import watchlist functions for management
+        from watchlist_config import (
+            get_all_watchlists, add_watchlist, update_watchlist, 
+            delete_watchlist, add_to_watchlist, remove_from_watchlist
+        )
+        
+        # Display current watchlists
+        st.write("**Current Watchlists:**")
+        all_watchlists = get_all_watchlists()
+        
+        for name, symbols in all_watchlists.items():
+            with st.expander(f"📊 {name.title()} ({len(symbols)} tickers)"):
+                st.write(", ".join(symbols))
+                
+                # Edit watchlist
+                col_edit1, col_edit2 = st.columns([3, 1])
+                with col_edit1:
+                    new_symbols = st.text_area(
+                        f"Edit {name} symbols (comma-separated):",
+                        value=", ".join(symbols),
+                        key=f"edit_{name}",
+                        height=100
+                    )
+                with col_edit2:
+                    if st.button(f"💾 Save", key=f"save_{name}"):
+                        new_symbol_list = [s.strip() for s in new_symbols.split(",") if s.strip()]
+                        update_watchlist(name, new_symbol_list)
+                        st.success(f"Updated {name} watchlist!")
+                        st.rerun()
+                    
+                    if name != "main" and st.button(f"🗑️ Delete", key=f"delete_{name}"):
+                        delete_watchlist(name)
+                        st.success(f"Deleted {name} watchlist!")
+                        st.rerun()
+        
+        # Add new watchlist
+        st.write("**Add New Watchlist:**")
+        col_new1, col_new2 = st.columns([1, 1])
+        
+        with col_new1:
+            new_watchlist_name = st.text_input("Watchlist Name")
+        
+        with col_new2:
+            new_watchlist_symbols = st.text_input("Symbols (comma-separated)")
+        
+        if st.button("➕ Create Watchlist") and new_watchlist_name and new_watchlist_symbols:
+            symbol_list = [s.strip() for s in new_watchlist_symbols.split(",") if s.strip()]
+            add_watchlist(new_watchlist_name.lower(), symbol_list)
+            st.success(f"Created {new_watchlist_name} watchlist!")
+            st.rerun()
+        
+        # Export/Import watchlists
+        st.write("**Export/Import Watchlists:**")
+        col_exp1, col_exp2 = st.columns([1, 1])
+        
+        with col_exp1:
+            if st.button("📥 Export Watchlists"):
+                import json
+                watchlist_json = json.dumps({"watchlists": all_watchlists}, indent=2)
+                st.download_button(
+                    label="Download watchlists.json",
+                    data=watchlist_json,
+                    file_name="watchlists_export.json",
+                    mime="application/json"
+                )
+        
+        with col_exp2:
+            uploaded_watchlist = st.file_uploader("Import Watchlists", type=['json'])
+            if uploaded_watchlist:
+                try:
+                    import json
+                    watchlist_data = json.load(uploaded_watchlist)
+                    if "watchlists" in watchlist_data:
+                        from watchlist_config import save_watchlists
+                        save_watchlists(watchlist_data)
+                        st.success("Watchlists imported successfully!")
+                        st.rerun()
+                    else:
+                        st.error("Invalid watchlist file format.")
+                except Exception as e:
+                    st.error(f"Error importing watchlists: {str(e)}")
+        
+        st.info("💡 **Tip:** Watchlists are automatically saved to `watchlists.json` file.")
+    
     
     with tab1:
         st.subheader("Ticker Parameters")
