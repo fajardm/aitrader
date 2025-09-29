@@ -277,6 +277,11 @@ def backtest_page(tickers, ticker_symbols):
                 
                 # Trades table
                 if not result['trades_df'].empty:
+                    st.dataframe(
+                        df.tail,
+                        width='stretch',
+                        height=300
+                    )
                     st.subheader("🔄 Trade History")
                     st.dataframe(
                         result['trades_df'].round(4),
