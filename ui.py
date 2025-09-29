@@ -253,7 +253,7 @@ def backtest_page(tickers, ticker_symbols):
                 if show_plots:
                     st.subheader("📈 Price Chart")
                     fig = create_plotly_chart(df, selected_ticker, result['trades_df'])
-                    st.plotly_chart(fig, use_container_width=True)
+                    st.plotly_chart(fig, width='stretch')
                     
                     # Equity curve
                     st.subheader("💰 Equity Curve")
@@ -270,14 +270,14 @@ def backtest_page(tickers, ticker_symbols):
                         yaxis_title='Equity ($)',
                         height=400
                     )
-                    st.plotly_chart(equity_fig, use_container_width=True)
+                    st.plotly_chart(equity_fig, width='stretch')
                 
                 # Trades table
                 if not result['trades_df'].empty:
                     st.subheader("🔄 Trade History")
                     st.dataframe(
                         result['trades_df'].round(4),
-                        use_container_width=True,
+                        width='stretch',
                         height=300
                     )
                     
@@ -336,7 +336,6 @@ def live_signals_page(tickers, ticker_symbols):
                     if not valid_currentday:
                         prevday = currentday
             
-                    # Generate signal
                     if use_llm:
                         prompt = render_prompt(prevday, ticker=ticker_symbol, risk_pct=risk_pct)
                         decision = call_llm(prompt)
@@ -352,7 +351,6 @@ def live_signals_page(tickers, ticker_symbols):
                             
                         signals_data.append({
                             'Ticker': ticker_symbol,
-                            'Date': datetime.now().date(),
                             'Regime': decision.get('regime', 'N/A'),
                             'Entry Type': entry_plan.get('type', 'N/A'),
                             'Entry Price': f"{price:.2f}",
@@ -372,7 +370,7 @@ def live_signals_page(tickers, ticker_symbols):
             if signals_data:
                 st.subheader("🎯 Trading Signals")
                 signals_df = pd.DataFrame(signals_data)
-                st.dataframe(signals_df, use_container_width=True, height=400)
+                st.dataframe(signals_df, width='stretch', height=400)
                 
                 # Export signals
                 csv = signals_df.to_csv(index=False)
@@ -382,10 +380,6 @@ def live_signals_page(tickers, ticker_symbols):
                     file_name=f"trading_signals_{datetime.now().strftime('%Y%m%d')}.csv",
                     mime="text/csv"
                 )
-                
-                # Summary stats
-                actionable_count = len([s for s in signals_data if '🟢' in s['Actionable']])
-                st.metric("Actionable Signals", f"{actionable_count}/{len(signals_data)}")
             else:
                 st.info("No signals generated.")
         
@@ -463,7 +457,7 @@ def optimization_page(tickers, ticker_symbols):
                 
                 st.subheader("🎯 Optimization Results")
                 results_df = pd.DataFrame(optimization_results)
-                st.dataframe(results_df, use_container_width=True)
+                st.dataframe(results_df, width='stretch')
                 
                 # Save results
                 if st.button("💾 Save Optimized Parameters"):
@@ -577,7 +571,7 @@ def portfolio_analysis_page(tickers, ticker_symbols):
                 # Detailed results
                 st.subheader("📊 Individual Ticker Performance")
                 portfolio_df = pd.DataFrame(portfolio_results)
-                st.dataframe(portfolio_df.round(2), use_container_width=True)
+                st.dataframe(portfolio_df.round(2), width='stretch')
                 
                 # Performance chart
                 st.subheader("📈 Return Distribution")
@@ -590,7 +584,7 @@ def portfolio_analysis_page(tickers, ticker_symbols):
                     yaxis_title='Return %',
                     height=400
                 )
-                st.plotly_chart(fig, use_container_width=True)
+                st.plotly_chart(fig, width='stretch')
 
 def settings_page(tickers):
     st.header("🔧 Settings")
@@ -631,7 +625,7 @@ def settings_page(tickers):
         if ticker_data:
             edited_df = st.data_editor(
                 pd.DataFrame(ticker_data),
-                use_container_width=True,
+                width='stretch',
                 num_rows="dynamic"
             )
             
