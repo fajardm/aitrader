@@ -272,6 +272,11 @@ def simulate(df: pd.DataFrame, ticker: str, start_idx: int, init_equity: float, 
                                     (exit_px - entry_px) / max(entry_px - sl_px, 1e-8)))
                 in_pos = False
                 exited = True
+            if not exited and i == len(df) - 2 and nxt['High'] < tp1:
+                equity += qty * (exit_px - entry_px)
+                trades.append(Trade(entry_date, entry_px, sl_px, [tp1, tp2, tp3], None, None, 0))
+                in_pos = False
+                exited = True
             if exited:
                 qty = 0.0
                 entry_date = None
@@ -306,6 +311,7 @@ def simulate(df: pd.DataFrame, ticker: str, start_idx: int, init_equity: float, 
                     qty = position_qty(equity, entry_px, sl_px, risk_pct)
                     entry_date = nxt.name
                     in_pos = qty > 0
+                    
     # finalize equity curve with last close
     if len(df) > 0:
         last_close = df.iloc[-1]['Close']
