@@ -497,8 +497,8 @@ def live_signal_loop(args):
             prevday = df.iloc[-2]
             currentday = df.iloc[-1]
 
-            is_currentday_valid = currentday.name.date() != pd.Timestamp.now().date()
-            if is_currentday_valid:
+            valid_currentday = currentday.name.date() == pd.Timestamp.now().date()
+            if not valid_currentday:
                prevday = currentday
 
             if not args.no_llm:
@@ -506,12 +506,6 @@ def live_signal_loop(args):
                 decision = call_llm(prompt)
             else:
                 decision = fallback_decision(prevday)
-
-            zone_low = decision['zone']['low']
-            zone_high = decision['zone']['high']
-
-            if is_currentday_valid and currentday.High >= zone_low and currentday.Low <= zone_high:
-                decision['enter']['type'] = 'market'
 
             print(f"{ticker.symbol} [{prevday.name.date()}] Signal: {decision}")
 

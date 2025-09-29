@@ -301,7 +301,6 @@ def live_signals_page(tickers, ticker_symbols):
     
     with col1:
         selected_tickers = st.multiselect("Select Tickers", ticker_symbols)
-        target_date = st.date_input("Target Date", value=datetime.now() - timedelta(days=1))
     
     with col2:
         risk_pct = st.slider("Risk per Trade (%)", min_value=0.1, max_value=5.0, value=1.0, step=0.1)
@@ -330,42 +329,39 @@ def live_signals_page(tickers, ticker_symbols):
                     # Load and process data
                     raw_data = load_ohlcv(ticker_symbol, (datetime.now() - timedelta(days=365)).strftime('%Y-%m-%d'))
                     df = build_dataset(raw_data, ticker_obj)
-                    
-                    # Find target row
-                    target_dt = pd.to_datetime(target_date)
-                    row = df[df.index.normalize() == target_dt.normalize()]
-                    
-                    if not row.empty:
-                        selected_row = row.iloc[0]
+                    prevday = df.iloc[-2]
+                    currentday = df.iloc[-1]
+
+                    valid_currentday = currentday.name.date() == datetime.now().date()
+                    if not valid_currentday:
+                        prevday = currentday
+            
+                    # Generate signal
+                    if use_llm:
+                        prompt = render_prompt(prevday, ticker=ticker_symbol, risk_pct=risk_pct)
+                        decision = call_llm(prompt)
+                    else:
+                        decision = fallback_decision(prevday)
                         
-                        # Generate signal
-                        if use_llm:
-                            prompt = render_prompt(selected_row, ticker=ticker_symbol, risk_pct=risk_pct)
-                            decision = call_llm(prompt)
-                        else:
-                            decision = fallback_decision(selected_row)
+                    zone_low = decision['zone']['low']
+                    zone_high = decision['zone']['high']
                         
-                        # Check if signal is actionable
-                        latest_row = df.iloc[-1]
-                        zone_low = decision['zone']['low']
-                        zone_high = decision['zone']['high']
-                        
-                        if latest_row.High >= zone_low and latest_row.Low <= zone_high:
-                            entry_plan = decision['enter']
-                            price = entry_plan.get('price', None)
+                    if currentday.High >= zone_low and currentday.Low <= zone_high:
+                        entry_plan = decision['enter']
+                        price = entry_plan.get('price', None)
                             
-                            signals_data.append({
-                                'Ticker': ticker_symbol,
-                                'Date': target_date,
-                                'Regime': decision.get('regime', 'N/A'),
-                                'Entry Type': entry_plan.get('type', 'N/A'),
-                                'Entry Price': f"{price:.2f}",
-                                'Stop Loss': f"{decision.get('stop_loss', 0):.2f} ({decision.get('stop_loss_pct', 0):.2f}%)",
-                                'Take Profits': f"{decision.get('take_profits', [])}",
-                                'Position Size': f"{decision.get('position_size_pct', 0):.2f}%",
-                                'Confidence': f"{decision.get('confidence', 0):.2f}%",
-                                'Current Price': f"{latest_row.Close:.2f}"
-                            })
+                        signals_data.append({
+                            'Ticker': ticker_symbol,
+                            'Date': datetime.now().date(),
+                            'Regime': decision.get('regime', 'N/A'),
+                            'Entry Type': entry_plan.get('type', 'N/A'),
+                            'Entry Price': f"{price:.2f}",
+                            'Stop Loss': f"{decision.get('stop_loss', 0):.2f} ({decision.get('stop_loss_pct', 0):.2f}%)",
+                            'Take Profits': f"{decision.get('take_profits', [])}",
+                            'Position Size': f"{decision.get('position_size_pct', 0):.2f}%",
+                            'Confidence': f"{decision.get('confidence', 0):.2f}%",
+                            'Current Price': f"{currentday.Close:.2f}"
+                        })
                     
                     progress_bar.progress((i + 1) / len(selected_tickers))
                     
@@ -383,7 +379,7 @@ def live_signals_page(tickers, ticker_symbols):
                 st.download_button(
                     label="📥 Download Signals CSV",
                     data=csv,
-                    file_name=f"trading_signals_{target_date.strftime('%Y%m%d')}.csv",
+                    file_name=f"trading_signals_{datetime.now().strftime('%Y%m%d')}.csv",
                     mime="text/csv"
                 )
                 
