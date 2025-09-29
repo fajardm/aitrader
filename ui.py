@@ -370,10 +370,11 @@ def live_signals_page(tickers, ticker_symbols):
                         
                     if currentday.High >= zone_low and currentday.Low <= zone_high:
                         entry_plan = decision['enter']
-                        price = entry_plan.get('price', None)
+                        price = max(entry_plan['price'], currentday.Low)
                             
                         signals_data.append({
                             'Ticker': ticker_symbol,
+                            'Prev Date': prevday.name.date(),
                             'Regime': decision.get('regime', 'N/A'),
                             'Entry Type': entry_plan.get('type', 'N/A'),
                             'Entry Price': f"{price:.2f}",
