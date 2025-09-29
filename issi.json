@@ -184,9 +184,9 @@
   {
     "symbol": "ANTM.JK",
     "name": "Aneka Tambang Tbk.",
-    "ema_short": 30,
-    "ema_long": 56,
-    "rsi": 21
+    "ema_short": 28,
+    "ema_long": 51,
+    "rsi": 7
   },
   {
     "symbol": "APII.JK",
@@ -654,7 +654,7 @@
     "symbol": "BRMS.JK",
     "name": "Bumi Resources Minerals Tbk.",
     "ema_short": 30,
-    "ema_long": 69,
+    "ema_long": 68,
     "rsi": 9
   },
   {
@@ -703,8 +703,8 @@
     "symbol": "BTPS.JK",
     "name": "Bank BTPN Syariah Tbk.",
     "ema_short": 30,
-    "ema_long": 51,
-    "rsi": 18
+    "ema_long": 58,
+    "rsi": 9
   },
   {
     "symbol": "BUAH.JK",
@@ -1220,8 +1220,8 @@
   {
     "symbol": "EMTK.JK",
     "name": "Elang Mahkota Teknologi Tbk.",
-    "ema_short": 28,
-    "ema_long": 63,
+    "ema_short": 27,
+    "ema_long": 55,
     "rsi": 8
   },
   {
@@ -1318,9 +1318,9 @@
   {
     "symbol": "FILM.JK",
     "name": "MD Entertainment Tbk.",
-    "ema_short": 19,
-    "ema_long": 35,
-    "rsi": 21
+    "ema_short": 29,
+    "ema_long": 51,
+    "rsi": 19
   },
   {
     "symbol": "FIRE.JK",
@@ -1787,8 +1787,8 @@
   {
     "symbol": "IMPC.JK",
     "name": "Impack Pratama Industri Tbk.",
-    "ema_short": 15,
-    "ema_long": 43,
+    "ema_short": 17,
+    "ema_long": 45,
     "rsi": 17
   },
   {
@@ -2488,8 +2488,8 @@
     "symbol": "MDKA.JK",
     "name": "Merdeka Copper Gold Tbk.",
     "ema_short": 30,
-    "ema_long": 67,
-    "rsi": 18
+    "ema_long": 37,
+    "rsi": 10
   },
   {
     "symbol": "MDKI.JK",
@@ -3243,8 +3243,8 @@
   {
     "symbol": "PTRO.JK",
     "name": "Petrosea Tbk.",
-    "ema_short": 28,
-    "ema_long": 43,
+    "ema_short": 29,
+    "ema_long": 51,
     "rsi": 7
   },
   {
@@ -4238,7 +4238,7 @@
     "symbol": "WIFI.JK",
     "name": "Solusi Sinergi Digital Tbk.",
     "ema_short": 29,
-    "ema_long": 64,
+    "ema_long": 50,
     "rsi": 19
   },
   {
@@ -4258,9 +4258,9 @@
   {
     "symbol": "WIRG.JK",
     "name": "WIR ASIA Tbk.",
-    "ema_short": 19,
+    "ema_short": 30,
     "ema_long": 35,
-    "rsi": 21
+    "rsi": 8
   },
   {
     "symbol": "WMUU.JK",
@@ -4335,15 +4335,22 @@
   {
     "symbol": "BRPT.JK",
     "name": "BRPT.JK",
-    "ema_short": 18,
-    "ema_long": 66,
-    "rsi": 20
+    "ema_short": 30,
+    "ema_long": 46,
+    "rsi": 14
   },
   {
     "symbol": "CUAN.JK",
     "name": "CUAN.JK",
     "ema_short": 30,
-    "ema_long": 35,
-    "rsi": 21
+    "ema_long": 37,
+    "rsi": 20
+  },
+  {
+    "symbol": "EMAS.JK",
+    "name": "EMAS.JK",
+    "ema_short": 12,
+    "ema_long": 42,
+    "rsi": 17
   }
 ]
