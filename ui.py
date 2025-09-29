@@ -374,7 +374,7 @@ def live_signals_page(tickers, ticker_symbols):
                             
                         signals_data.append({
                             'Ticker': ticker_symbol,
-                            'Prev Date': prevday.name.date(),
+                            'Last Date': currentday.name.date(),
                             'Regime': decision.get('regime', 'N/A'),
                             'Entry Type': entry_plan.get('type', 'N/A'),
                             'Entry Price': f"{price:.2f}",
