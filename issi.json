@@ -184,8 +184,8 @@
   {
     "symbol": "ANTM.JK",
     "name": "Aneka Tambang Tbk.",
-    "ema_short": 24,
-    "ema_long": 36,
+    "ema_short": 18,
+    "ema_long": 40,
     "rsi": 19
   },
   {
@@ -213,8 +213,8 @@
     "symbol": "ARCI.JK",
     "name": "Archi Indonesia Tbk.",
     "ema_short": 11,
-    "ema_long": 61,
-    "rsi": 19
+    "ema_long": 68,
+    "rsi": 14
   },
   {
     "symbol": "AREA.JK",
@@ -653,8 +653,8 @@
   {
     "symbol": "BRMS.JK",
     "name": "Bumi Resources Minerals Tbk.",
-    "ema_short": 18,
-    "ema_long": 67,
+    "ema_short": 17,
+    "ema_long": 37,
     "rsi": 9
   },
   {
@@ -703,8 +703,8 @@
     "symbol": "BTPS.JK",
     "name": "Bank BTPN Syariah Tbk.",
     "ema_short": 18,
-    "ema_long": 51,
-    "rsi": 9
+    "ema_long": 37,
+    "rsi": 8
   },
   {
     "symbol": "BUAH.JK",
@@ -1221,8 +1221,8 @@
     "symbol": "EMTK.JK",
     "name": "Elang Mahkota Teknologi Tbk.",
     "ema_short": 13,
-    "ema_long": 48,
-    "rsi": 8
+    "ema_long": 55,
+    "rsi": 10
   },
   {
     "symbol": "ENAK.JK",
@@ -1318,9 +1318,9 @@
   {
     "symbol": "FILM.JK",
     "name": "MD Entertainment Tbk.",
-    "ema_short": 19,
-    "ema_long": 69,
-    "rsi": 8
+    "ema_short": 29,
+    "ema_long": 67,
+    "rsi": 17
   },
   {
     "symbol": "FIRE.JK",
@@ -1788,7 +1788,7 @@
     "symbol": "IMPC.JK",
     "name": "Impack Pratama Industri Tbk.",
     "ema_short": 14,
-    "ema_long": 70,
+    "ema_long": 66,
     "rsi": 17
   },
   {
@@ -1836,16 +1836,16 @@
   {
     "symbol": "INDY.JK",
     "name": "Indika Energy Tbk.",
-    "ema_short": 28,
-    "ema_long": 63,
-    "rsi": 13
+    "ema_short": 20,
+    "ema_long": 62,
+    "rsi": 11
   },
   {
     "symbol": "INET.JK",
     "name": "Sinergi Inti Andalan Prima Tbk.",
-    "ema_short": 23,
+    "ema_short": 12,
     "ema_long": 60,
-    "rsi": 17
+    "rsi": 14
   },
   {
     "symbol": "INKP.JK",
@@ -2403,9 +2403,9 @@
   {
     "symbol": "MAPA.JK",
     "name": "Map Aktif Adiperkasa Tbk.",
-    "ema_short": 30,
-    "ema_long": 67,
-    "rsi": 8
+    "ema_short": 19,
+    "ema_long": 39,
+    "rsi": 13
   },
   {
     "symbol": "MAPB.JK",
@@ -2452,7 +2452,7 @@
   {
     "symbol": "MBMA.JK",
     "name": "Merdeka Battery Materials Tbk.",
-    "ema_short": 29,
+    "ema_short": 26,
     "ema_long": 70,
     "rsi": 8
   },
@@ -2487,8 +2487,8 @@
   {
     "symbol": "MDKA.JK",
     "name": "Merdeka Copper Gold Tbk.",
-    "ema_short": 15,
-    "ema_long": 64,
+    "ema_short": 14,
+    "ema_long": 46,
     "rsi": 7
   },
   {
@@ -2677,8 +2677,8 @@
     "symbol": "MPPA.JK",
     "name": "Matahari Putra Prima Tbk.",
     "ema_short": 30,
-    "ema_long": 64,
-    "rsi": 11
+    "ema_long": 56,
+    "rsi": 20
   },
   {
     "symbol": "MPRO.JK",
@@ -2816,8 +2816,8 @@
   {
     "symbol": "NCKL.JK",
     "name": "Trimegah Bangun Persada Tbk.",
-    "ema_short": 11,
-    "ema_long": 40,
+    "ema_short": 19,
+    "ema_long": 36,
     "rsi": 11
   },
   {
@@ -3244,7 +3244,7 @@
     "symbol": "PTRO.JK",
     "name": "Petrosea Tbk.",
     "ema_short": 23,
-    "ema_long": 59,
+    "ema_long": 65,
     "rsi": 13
   },
   {
@@ -3656,8 +3656,8 @@
   {
     "symbol": "SMIL.JK",
     "name": "Sarana Mitra Luas Tbk.",
-    "ema_short": 24,
-    "ema_long": 46,
+    "ema_short": 17,
+    "ema_long": 57,
     "rsi": 21
   },
   {
@@ -4000,7 +4000,7 @@
     "symbol": "TOBA.JK",
     "name": "TBS Energi Utama Tbk.",
     "ema_short": 20,
-    "ema_long": 56,
+    "ema_long": 60,
     "rsi": 17
   },
   {
@@ -4237,8 +4237,8 @@
   {
     "symbol": "WIFI.JK",
     "name": "Solusi Sinergi Digital Tbk.",
-    "ema_short": 14,
-    "ema_long": 51,
+    "ema_short": 16,
+    "ema_long": 66,
     "rsi": 20
   },
   {
@@ -4336,21 +4336,21 @@
     "symbol": "BRPT.JK",
     "name": "BRPT.JK",
     "ema_short": 18,
-    "ema_long": 61,
+    "ema_long": 36,
     "rsi": 7
   },
   {
     "symbol": "CUAN.JK",
     "name": "CUAN.JK",
     "ema_short": 28,
-    "ema_long": 39,
-    "rsi": 20
+    "ema_long": 47,
+    "rsi": 21
   },
   {
     "symbol": "EMAS.JK",
     "name": "EMAS.JK",
-    "ema_short": 27,
-    "ema_long": 54,
-    "rsi": 13
+    "ema_short": 18,
+    "ema_long": 48,
+    "rsi": 7
   }
 ]
