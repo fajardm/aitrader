@@ -23,8 +23,7 @@ logging.basicConfig(
 # Import the main trading functions
 from main import (
     load_ticker, load_ohlcv, build_dataset, simulate, run_optuna,
-    fallback_decision, call_llm, render_prompt, TickerParam,
-    optuna_objective
+    fallback_decision, call_llm, render_prompt, TickerParam
 )
 
 # Import watchlist configuration

@@ -1,9 +1,9 @@
 """
-LLM + Backtest (Daily timeframe) — no hard dependency on yfinance
------------------------------------------------------------------
-- Fetch OHLCV from yfinance.
+LLM + Backtest (Daily timeframe) — using investiny for data fetching
+--------------------------------------------------------------------
+- Fetch OHLCV from investiny (with yfinance fallback for compatibility).
 - Compute features (EMA/RSI/ATR/Bollinger + regime classification).
-- Ask an LLM (OpenAI) for entry/SL/TP in JSON **or** use rule-based fallback.
+- Ask an LLM (Groq) for entry/SL/TP in JSON **or** use rule-based fallback.
 - Simulate next-day limit/market execution, SL/TP handling, equity curve.
 - Report key metrics (trades, win rate, expectancy, profit factor, max DD).
 - Optional matplotlib plots.
@@ -11,19 +11,17 @@ LLM + Backtest (Daily timeframe) — no hard dependency on yfinance
 
 How to run (no internet):
   pip install pandas numpy matplotlib
-  python llm_yfinance_backtest.py --equity 100000000 --risk 1.0 --plots 1
+  python main.py --equity 100000000 --risk 1.0 --plots 1
 
 Optional (with internet):
-  pip install yfinance
-  python llm_yfinance_backtest.py --ticker WIFI.JK --start 2020-01-01 --equity 100000000 --risk 1.0 --plots 1
+  pip install investiny
+  python main.py --tickers WIFI.JK --start 2020-01-01 --equity 100000000 --risk 1.0 --plots 1
 
-OpenAI (optional):
-  pip install openai
-  export OPENAI_API_KEY=your_key_here
-  # Script will call the LLM if the SDK + key are available, otherwise fallback rules apply.
+Groq API (optional):
+  # Script will call the LLM if available, otherwise fallback rules apply.
 
 Run tests (offline):
-  python llm_yfinance_backtest.py --run-tests
+  python main.py --run-tests
 """
 from __future__ import annotations
 import time
@@ -37,7 +35,6 @@ import numpy as np
 import pandas as pd
 from investiny import search_assets, historical_data
 import requests
-import logging
 
 class TickerParam:
     symbol: str
@@ -100,7 +97,7 @@ def classify_regime(df: pd.DataFrame) -> pd.Series:
     return pd.Series(regime, index=df.index)
 
 # =========================
-# Data loading (CSV first, yfinance optional)
+# Data loading (investiny primary, yfinance fallback)
 # =========================
 
 def ensure_ohlcv_schema(df: pd.DataFrame) -> pd.DataFrame:
@@ -185,11 +182,11 @@ def load_ohlcv(ticker: str, start: Optional[str]) -> pd.DataFrame:
             # Add Adj Close column (same as Close for investiny)
             df['Adj Close'] = df['Close']
             
-            logging.info(f"✓ Loaded {len(df)} records for {ticker} using investiny")
+            print(f"✓ Loaded {len(df)} records for {ticker} using investiny")
             return df.dropna()
             
     except Exception as e:
-        logging.error(f"Investiny failed for {ticker}: {e}")
+        print(f"Investiny failed for {ticker}: {e}")
 
 # =========================
 # LLM interface (pluggable)
@@ -567,7 +564,7 @@ def live_signal_loop(args):
 
             valid_currentday = currentday.name.date() == pd.Timestamp.now().date()
             if not valid_currentday:
-               prevday = currentday
+                prevday = currentday
 
             if not args.no_llm:
                 prompt = render_prompt(prevday, ticker=ticker.symbol, risk_pct=args.risk)
@@ -581,25 +578,25 @@ def live_signal_loop(args):
         time.sleep(900)
 
 def optimize(args):
-        all_tickers = load_ticker('./issi.json')
-        # Determine which tickers to optimize
-        ticker_names = args.tickers if args.tickers is not None else [t.symbol for t in all_tickers]
-        # Ensure all tickers in ticker_names exist in all_tickers
-        symbol_to_ticker = {t.symbol: t for t in all_tickers}
-        for ticker_name in ticker_names:
-            ticker = symbol_to_ticker.get(ticker_name)
-            if ticker is None:
-                ticker = TickerParam(ticker_name, ticker_name, 20, 50, 14)
-                all_tickers.append(ticker)
-                symbol_to_ticker[ticker_name] = ticker
-            df = load_ohlcv(ticker.symbol, args.start)
-            study = run_optuna(df, args.equity, args.risk, not args.no_llm, n_trials=500)
-            ticker.ema_short = study.best_params['EMA_SHORT']
-            ticker.ema_long = study.best_params['EMA_LONG']
-            ticker.rsi = study.best_params['RSI']
+    all_tickers = load_ticker('./issi.json')
+    # Determine which tickers to optimize
+    ticker_names = args.tickers if args.tickers is not None else [t.symbol for t in all_tickers]
+    # Ensure all tickers in ticker_names exist in all_tickers
+    symbol_to_ticker = {t.symbol: t for t in all_tickers}
+    for ticker_name in ticker_names:
+        ticker = symbol_to_ticker.get(ticker_name)
+        if ticker is None:
+            ticker = TickerParam(ticker_name, ticker_name, 20, 50, 14)
+            all_tickers.append(ticker)
+            symbol_to_ticker[ticker_name] = ticker
+        df = load_ohlcv(ticker.symbol, args.start)
+        study = run_optuna(df, args.equity, args.risk, not args.no_llm, n_trials=500)
+        ticker.ema_short = study.best_params['EMA_SHORT']
+        ticker.ema_long = study.best_params['EMA_LONG']
+        ticker.rsi = study.best_params['RSI']
 
-        with open('./issi.json', 'w', encoding='utf-8') as f:
-            json.dump([t.__dict__ for t in all_tickers], f, indent=2)
+    with open('./issi.json', 'w', encoding='utf-8') as f:
+        json.dump([t.__dict__ for t in all_tickers], f, indent=2)
 
 def main():
     # set -start to a year from now if not provided
