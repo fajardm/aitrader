@@ -37,6 +37,7 @@ import numpy as np
 import pandas as pd
 from investiny import search_assets, historical_data
 import requests
+import logging
 
 class TickerParam:
     symbol: str
@@ -184,11 +185,11 @@ def load_ohlcv(ticker: str, start: Optional[str]) -> pd.DataFrame:
             # Add Adj Close column (same as Close for investiny)
             df['Adj Close'] = df['Close']
             
-            print(f"✓ Loaded {len(df)} records for {ticker} using investiny")
+            logging.info(f"✓ Loaded {len(df)} records for {ticker} using investiny")
             return df.dropna()
             
     except Exception as e:
-        print(f"Investiny failed for {ticker}: {e}")
+        logging.error(f"Investiny failed for {ticker}: {e}")
 
 # =========================
 # LLM interface (pluggable)
