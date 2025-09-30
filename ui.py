@@ -13,10 +13,12 @@ from plotly.subplots import make_subplots
 import json
 import time
 from datetime import datetime, timedelta
-import asyncio
-from concurrent.futures import ThreadPoolExecutor
-import io
-import sys
+import logging
+
+logging.basicConfig(
+    level=logging.DEBUG,  # atau INFO
+    format="%(asctime)s - %(levelname)s - %(message)s"
+)
 
 # Import the main trading functions
 from main import (
