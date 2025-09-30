@@ -13,12 +13,6 @@ from plotly.subplots import make_subplots
 import json
 import time
 from datetime import datetime, timedelta
-import logging
-
-logging.basicConfig(
-    level=logging.DEBUG,  # atau INFO
-    format="%(asctime)s - %(levelname)s - %(message)s"
-)
 
 # Import the main trading functions
 from main import (
@@ -27,7 +21,7 @@ from main import (
 )
 
 # Import watchlist configuration
-from watchlist_config import get_watchlist, get_all_watchlists, get_watchlist_names
+from watchlist_config import get_watchlist, get_watchlist_names
 
 # Page configuration
 st.set_page_config(
