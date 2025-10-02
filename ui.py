@@ -359,28 +359,24 @@ def live_signals_page(tickers, ticker_symbols):
 
                     if decision['regime'] == 'no_trade':
                         continue
+
+                    entry_price = decision['enter']['price']
+
+                    signals_data.append({
+                        'Ticker': ticker_symbol,
+                        'Last Date': currentday.name.date(),
+                        'Regime': decision.get('regime', 'N/A'),
+                        'Entry Type': decision['enter'].get('type', 'N/A'),
+                        'Entry Price': f"{entry_price:.2f}",
+                        'Current Price': f"{currentday.Close:.2f}",
+                        'Difference': f"{currentday.Close - entry_price}",
+                        'Stop Loss': f"{decision.get('stop_loss', 0):.2f} ({decision.get('stop_loss_pct', 0):.2f}%)",
+                        'Take Profits': f"{decision.get('take_profits', [])}",
+                        'Position Size': f"{decision.get('position_size_pct', 0):.2f}%",
+                        'Confidence': f"{decision.get('confidence', 0):.2f}%",
+                        'Can Enter Today': "✅" if valid_currentday and currentday.High >= entry_price >= currentday.Low else "❌"
+                    })
                         
-                    zone_low = decision['zone']['low']
-                    zone_high = decision['zone']['high']
-                        
-                    if currentday.High >= zone_low and currentday.Low <= zone_high:
-                        entry_plan = decision['enter']
-                        price = max(entry_plan['price'], currentday.Low)
-                            
-                        signals_data.append({
-                            'Ticker': ticker_symbol,
-                            'Last Date': currentday.name.date(),
-                            'Regime': decision.get('regime', 'N/A'),
-                            'Zone': f"{zone_low:.2f} - {zone_high:.2f}",
-                            'Entry Type': entry_plan.get('type', 'N/A'),
-                            'Entry Price': f"{price:.2f}",
-                            'Stop Loss': f"{decision.get('stop_loss', 0):.2f} ({decision.get('stop_loss_pct', 0):.2f}%)",
-                            'Take Profits': f"{decision.get('take_profits', [])}",
-                            'Position Size': f"{decision.get('position_size_pct', 0):.2f}%",
-                            'Confidence': f"{decision.get('confidence', 0):.2f}%",
-                            'Current Price': f"{currentday.Close:.2f}",
-                            'Valid Currentday': valid_currentday
-                        })
                     
                     progress_bar.progress((i + 1) / len(selected_tickers))
                     

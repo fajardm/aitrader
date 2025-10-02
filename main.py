@@ -202,7 +202,7 @@ def render_prompt(row: pd.Series, ticker: str, risk_pct: float) -> str:
         f"Bollinger mid/low/up: {row.BB_MID:.2f}, {row.BB_LOW:.2f}, {row.BB_UP:.2f}\n"
         f"Regime: {row.Regime}\n"
         f"Kandidat: Pullback_EMA_SHORT {row.Pullback_EMA_SHORT:.2f}, Pullback_ATR {row.Pullback_ATR:.2f}\n"
-        f"Risk per trade max: {risk_pct}%. Output JSON only with keys: regime, enter{{type,prices[2]}}, stop_loss, take_profits[3], position_size_pct, confidence, rationale."
+        f"Risk per trade max: {risk_pct}%. Output JSON only with keys: regime, enter{{type,price}}, stop_loss, take_profits[3], position_size_pct, confidence, rationale."
     )
 
 def safe_parse_llm_json(text: str) -> Optional[Dict[str, Any]]:
@@ -235,8 +235,7 @@ def fallback_decision(row: pd.Series) -> Dict[str, Any]:
     if regime not in ("trend_up", "ranging"):
         return {"regime": "no_trade"}
 
-    zone_1 = round(min(row.Pullback_EMA_SHORT, row.Pullback_ATR))
-    zone_2 = round(max(row.Pullback_EMA_SHORT, row.Pullback_ATR))
+    entry_price = round(min(row.Pullback_EMA_SHORT, row.Pullback_ATR))
     
     # Stop loss yang lebih ketat - berdasarkan persentase dari entry price
     if regime == "trend_up":
@@ -247,14 +246,14 @@ def fallback_decision(row: pd.Series) -> Dict[str, Any]:
         sl_pct = 0.02   # 2%
     
     # SL minimum berdasarkan persentase, maksimum berdasarkan ATR
-    sl_pct_based = round(zone_1 * (1 - sl_pct))
-    sl_atr_based = round(zone_1 - 0.5 * row.ATR if not np.isnan(row.ATR) else zone_1 * 0.98)
+    sl_pct_based = round(entry_price * (1 - sl_pct))
+    sl_atr_based = round(entry_price - 0.5 * row.ATR if not np.isnan(row.ATR) else entry_price * 0.98)
     
     # Gunakan yang lebih ketat (lebih tinggi) antara persentase dan ATR
     sl = max(sl_pct_based, sl_atr_based)
     
-    r = max(zone_1 - sl, 1e-6)
-    tp1, tp2, tp3 = round(zone_1 + 1 * r), round(zone_1 + 2 * r), round(zone_1 + 3 * r)
+    r = max(entry_price - sl, 1e-6)
+    tp1, tp2, tp3 = round(entry_price + 1 * r), round(entry_price + 2 * r), round(entry_price + 3 * r)
 
     # position_size_pct: semakin kecil ATR, semakin besar size (maks 20%)
     base_size = 10.0
@@ -266,12 +265,11 @@ def fallback_decision(row: pd.Series) -> Dict[str, Any]:
     confidence = 50 + min(40, max(0, ema_diff / row.Close * 100)) + min(10, max(0, (row.RSI - 50) / 5))
 
     # Percentage stop loss
-    stop_loss_pct = round(100 * abs(zone_1 - sl) / zone_1, 2) if zone_1 != 0 else None
+    stop_loss_pct = round(100 * abs(entry_price - sl) / entry_price, 2) if entry_price != 0 else None
 
     return {
         "regime": regime,
-        "zone": {"low": zone_1, "high": zone_2},
-        "enter": {"type": "limit", "price": zone_1},
+        "enter": {"type": "limit", "price": entry_price},
         "stop_loss": sl,
         "stop_loss_pct": stop_loss_pct,
         "take_profits": [tp1, tp2, tp3],
@@ -369,11 +367,8 @@ def simulate(df: pd.DataFrame, ticker: str, start_idx: int, init_equity: float, 
                 entry_date = nxt.name
                 in_pos = qty > 0
             else:
-                zone_low = decision['zone']['low']
-                zone_high = decision['zone']['high']
-                # Entry jika harga hari berikutnya overlap dengan zona entry
-                if nxt['High'] >= zone_low and nxt['Low'] <= zone_high:
-                    entry_px = max(entry_plan['price'], nxt['Low'])
+                entry_px = entry_plan['price']
+                if nxt['Low'] <= entry_px <= nxt['High']:
                     sl_px = float(decision['stop_loss'])
                     tp1, tp2, tp3 = [float(x) for x in decision['take_profits']]
                     qty = position_qty(equity, entry_px, sl_px, risk_pct)
