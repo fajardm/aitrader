@@ -202,7 +202,7 @@ def render_prompt(row: pd.Series, ticker: str, risk_pct: float) -> str:
         f"Bollinger mid/low/up: {row.BB_MID:.2f}, {row.BB_LOW:.2f}, {row.BB_UP:.2f}\n"
         f"Regime: {row.Regime}\n"
         f"Kandidat: Pullback_EMA_SHORT {row.Pullback_EMA_SHORT:.2f}, Pullback_ATR {row.Pullback_ATR:.2f}\n"
-        f"Risk per trade max: {risk_pct}%. Output JSON only with keys: regime, enter{{type,price}}, stop_loss, take_profits[3], position_size_pct, confidence, rationale."
+        f"Risk per trade max: {risk_pct}%. Output JSON only with keys: regime, enter{{type,price}}, stop_loss, take_profit, position_size_pct, confidence, rationale."
     )
 
 def safe_parse_llm_json(text: str) -> Optional[Dict[str, Any]]:
@@ -253,7 +253,8 @@ def fallback_decision(row: pd.Series) -> Dict[str, Any]:
     sl = max(sl_pct_based, sl_atr_based)
     
     r = max(entry_price - sl, 1e-6)
-    tp1, tp2, tp3 = round(entry_price + 1 * r), round(entry_price + 2 * r), round(entry_price + 3 * r)
+    # Single take profit untuk pemula - target 2R (risk-reward ratio 1:2)
+    tp = round(entry_price + 2 * r)
 
     # position_size_pct: semakin kecil ATR, semakin besar size (maks 20%)
     base_size = 10.0
@@ -267,15 +268,19 @@ def fallback_decision(row: pd.Series) -> Dict[str, Any]:
     # Percentage stop loss
     stop_loss_pct = round(100 * abs(entry_price - sl) / entry_price, 2) if entry_price != 0 else None
 
+    # Percentage take profit
+    take_profit_pct = round(100 * abs(tp - entry_price) / entry_price, 2) if entry_price != 0 else None
+
     return {
         "regime": regime,
         "enter": {"type": "limit", "price": entry_price},
         "stop_loss": sl,
         "stop_loss_pct": stop_loss_pct,
-        "take_profits": [tp1, tp2, tp3],
+        "take_profit": tp,
+        "take_profit_pct": take_profit_pct,
         "position_size_pct": round(position_size_pct, 2),
         "confidence": round(float(confidence), 2),
-        "rationale": f"fallback {regime} pullback"
+        "rationale": f"fallback {regime} pullback, 2R target"
     }
 
 # =========================
@@ -287,7 +292,7 @@ class Trade:
     entry_date: pd.Timestamp
     entry: float
     sl: float
-    tps: List[float]
+    tp: float
     exit_date: pd.Timestamp
     exit: float
     r_multiple: float
@@ -307,7 +312,7 @@ def simulate(df: pd.DataFrame, ticker: str, start_idx: int, init_equity: float, 
     trades: List[Trade] = []
 
     in_pos = False
-    entry_px = sl_px = tp1 = tp2 = tp3 = 0.0
+    entry_px = sl_px = tp = 0.0
     qty = 0.0
     entry_date: Optional[pd.Timestamp] = None
 
@@ -326,19 +331,15 @@ def simulate(df: pd.DataFrame, ticker: str, start_idx: int, init_equity: float, 
             if nxt['Low'] <= sl_px:
                 exit_px = float(sl_px)
                 equity += qty * (exit_px - entry_px)
-                trades.append(Trade(entry_date, entry_px, sl_px, [tp1, tp2, tp3], nxt.name, exit_px,
+                trades.append(Trade(entry_date, entry_px, sl_px, tp, nxt.name, exit_px,
                                     (exit_px - entry_px) / max(entry_px - sl_px, 1e-8)))
                 in_pos = False
                 exited = True
-            # Check TPs in ascending order, but prefer higher TP if multiple hit
-            if not exited and nxt['High'] >= tp1:
-                exit_px = tp1
-                if nxt['High'] >= tp2:
-                    exit_px = tp2
-                if nxt['High'] >= tp3:
-                    exit_px = tp3
+            # Check single TP
+            if not exited and nxt['High'] >= tp:
+                exit_px = float(tp)
                 equity += qty * (exit_px - entry_px)
-                trades.append(Trade(entry_date, entry_px, sl_px, [tp1, tp2, tp3], nxt.name, float(exit_px),
+                trades.append(Trade(entry_date, entry_px, sl_px, tp, nxt.name, exit_px,
                                     (exit_px - entry_px) / max(entry_px - sl_px, 1e-8)))
                 in_pos = False
                 exited = True
@@ -362,7 +363,7 @@ def simulate(df: pd.DataFrame, ticker: str, start_idx: int, init_equity: float, 
                 # market: enter at next open
                 entry_px = float(nxt['Open'])
                 sl_px = float(decision['stop_loss'])
-                tp1, tp2, tp3 = [float(x) for x in decision['take_profits']]
+                tp = float(decision['take_profit'])
                 qty = position_qty(equity, entry_px, sl_px, risk_pct)
                 entry_date = nxt.name
                 in_pos = qty > 0
@@ -370,13 +371,13 @@ def simulate(df: pd.DataFrame, ticker: str, start_idx: int, init_equity: float, 
                 entry_px = entry_plan['price']
                 if nxt['Low'] <= entry_px <= nxt['High']:
                     sl_px = float(decision['stop_loss'])
-                    tp1, tp2, tp3 = [float(x) for x in decision['take_profits']]
+                    tp = float(decision['take_profit'])
                     qty = position_qty(equity, entry_px, sl_px, risk_pct)
                     entry_date = nxt.name
                     in_pos = qty > 0
                     if i==len(df)-2:
                         equity += qty * (exit_px - entry_px)
-                        trades.append(Trade(entry_date, entry_px, sl_px, [tp1, tp2, tp3], None, None, 0))
+                        trades.append(Trade(entry_date, entry_px, sl_px, tp, None, None, 0))
                     
     # finalize equity curve with last close
     if len(df) > 0:
