@@ -371,7 +371,7 @@ def live_signals_page(tickers, ticker_symbols):
                         'Current Price': f"{currentday.Close:.2f}",
                         'Difference': f"{currentday.Close - entry_price}",
                         'Stop Loss': f"{decision.get('stop_loss', 0):.2f} ({decision.get('stop_loss_pct', 0):.2f}%)",
-                        'Take Profits': f"{decision.get('take_profits', [])}",
+                        'Take Profit': f"{decision.get('take_profit', 'N/A')}",
                         'Position Size': f"{decision.get('position_size_pct', 0):.2f}%",
                         'Confidence': f"{decision.get('confidence', 0):.2f}%",
                         'Can Enter Today': "✅" if valid_currentday and currentday.High >= entry_price >= currentday.Low else "❌"
