@@ -33,8 +33,13 @@ import optuna
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from investiny import search_assets, historical_data
 import requests
+import sys
+import os
+
+# Add local investiny to path
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'investiny_local', 'src'))
+from investiny import search_assets, historical_data
 
 class TickerParam:
     symbol: str
