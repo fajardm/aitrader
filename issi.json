@@ -186,7 +186,8 @@
     "name": "Aneka Tambang Tbk.",
     "ema_short": 26,
     "ema_long": 36,
-    "rsi": 12
+    "rsi": 12,
+    "investing_id": 101294
   },
   {
     "symbol": "APII.JK",
@@ -214,7 +215,8 @@
     "name": "Archi Indonesia Tbk.",
     "ema_short": 10,
     "ema_long": 48,
-    "rsi": 9
+    "rsi": 9,
+    "investing_id": 1174687
   },
   {
     "symbol": "AREA.JK",
@@ -655,7 +657,8 @@
     "name": "Bumi Resources Minerals Tbk.",
     "ema_short": 30,
     "ema_long": 70,
-    "rsi": 14
+    "rsi": 14,
+    "investing_id": 101362
   },
   {
     "symbol": "BRRC.JK",
@@ -704,7 +707,8 @@
     "name": "Bank BTPN Syariah Tbk.",
     "ema_short": 17,
     "ema_long": 57,
-    "rsi": 12
+    "rsi": 12,
+    "investing_id": 1084855
   },
   {
     "symbol": "BUAH.JK",
@@ -739,7 +743,8 @@
     "name": "Bumi Resources Tbk.",
     "ema_short": 13,
     "ema_long": 36,
-    "rsi": 11
+    "rsi": 11,
+    "investing_id": 101363
   },
   {
     "symbol": "BUVA.JK",
@@ -1222,7 +1227,8 @@
     "name": "Elang Mahkota Teknologi Tbk.",
     "ema_short": 20,
     "ema_long": 69,
-    "rsi": 15
+    "rsi": 15,
+    "investing_id": 101226
   },
   {
     "symbol": "ENAK.JK",
@@ -1320,7 +1326,8 @@
     "name": "MD Entertainment Tbk.",
     "ema_short": 21,
     "ema_long": 50,
-    "rsi": 8
+    "rsi": 8,
+    "investing_id": 1089909
   },
   {
     "symbol": "FIRE.JK",
@@ -1789,7 +1796,8 @@
     "name": "Impack Pratama Industri Tbk.",
     "ema_short": 22,
     "ema_long": 45,
-    "rsi": 14
+    "rsi": 14,
+    "investing_id": 943664
   },
   {
     "symbol": "INCI.JK",
@@ -1838,14 +1846,16 @@
     "name": "Indika Energy Tbk.",
     "ema_short": 26,
     "ema_long": 36,
-    "rsi": 17
+    "rsi": 17,
+    "investing_id": 101437
   },
   {
     "symbol": "INET.JK",
     "name": "Sinergi Inti Andalan Prima Tbk.",
     "ema_short": 10,
     "ema_long": 56,
-    "rsi": 19
+    "rsi": 19,
+    "investing_id": 1205134
   },
   {
     "symbol": "INKP.JK",
@@ -2405,7 +2415,8 @@
     "name": "Map Aktif Adiperkasa Tbk.",
     "ema_short": 24,
     "ema_long": 50,
-    "rsi": 21
+    "rsi": 21,
+    "investing_id": 1088206
   },
   {
     "symbol": "MAPB.JK",
@@ -2454,7 +2465,8 @@
     "name": "Merdeka Battery Materials Tbk.",
     "ema_short": 13,
     "ema_long": 36,
-    "rsi": 19
+    "rsi": 19,
+    "investing_id": 1202168
   },
   {
     "symbol": "MBTO.JK",
@@ -2489,7 +2501,8 @@
     "name": "Merdeka Copper Gold Tbk.",
     "ema_short": 17,
     "ema_long": 54,
-    "rsi": 12
+    "rsi": 12,
+    "investing_id": 954960
   },
   {
     "symbol": "MDKI.JK",
@@ -2678,7 +2691,8 @@
     "name": "Matahari Putra Prima Tbk.",
     "ema_short": 28,
     "ema_long": 65,
-    "rsi": 21
+    "rsi": 21,
+    "investing_id": 101494
   },
   {
     "symbol": "MPRO.JK",
@@ -2818,7 +2832,8 @@
     "name": "Trimegah Bangun Persada Tbk.",
     "ema_short": 12,
     "ema_long": 35,
-    "rsi": 11
+    "rsi": 11,
+    "investing_id": 1202085
   },
   {
     "symbol": "NELY.JK",
@@ -3245,7 +3260,8 @@
     "name": "Petrosea Tbk.",
     "ema_short": 17,
     "ema_long": 69,
-    "rsi": 9
+    "rsi": 9,
+    "investing_id": 101546
   },
   {
     "symbol": "PTSN.JK",
@@ -3658,7 +3674,8 @@
     "name": "Sarana Mitra Luas Tbk.",
     "ema_short": 20,
     "ema_long": 52,
-    "rsi": 21
+    "rsi": 21,
+    "investing_id": 1202765
   },
   {
     "symbol": "SMKL.JK",
@@ -4001,7 +4018,8 @@
     "name": "TBS Energi Utama Tbk.",
     "ema_short": 15,
     "ema_long": 44,
-    "rsi": 7
+    "rsi": 7,
+    "investing_id": 101609
   },
   {
     "symbol": "TOOL.JK",
@@ -4239,7 +4257,8 @@
     "name": "Solusi Sinergi Digital Tbk.",
     "ema_short": 15,
     "ema_long": 56,
-    "rsi": 17
+    "rsi": 17,
+    "investing_id": 1177005
   },
   {
     "symbol": "WINR.JK",
@@ -4260,7 +4279,8 @@
     "name": "WIR ASIA Tbk.",
     "ema_short": 19,
     "ema_long": 51,
-    "rsi": 21
+    "rsi": 21,
+    "investing_id": 1187546
   },
   {
     "symbol": "WMUU.JK",
@@ -4337,21 +4357,24 @@
     "name": "BRPT.JK",
     "ema_short": 12,
     "ema_long": 47,
-    "rsi": 19
+    "rsi": 19,
+    "investing_id": 101343
   },
   {
     "symbol": "CUAN.JK",
     "name": "CUAN.JK",
     "ema_short": 10,
     "ema_long": 64,
-    "rsi": 19
+    "rsi": 19,
+    "investing_id": 1200670
   },
   {
     "symbol": "EMAS.JK",
     "name": "EMAS.JK",
     "ema_short": 15,
     "ema_long": 60,
-    "rsi": 13
+    "rsi": 13,
+    "investing_id": 1234956
   },
   {
     "symbol": "BBRI.JK",

@@ -36,6 +36,10 @@ import pandas as pd
 import requests
 import sys
 import os
+import argparse
+import json
+import cloudscraper
+from bs4 import BeautifulSoup
 
 # Add local investiny to path
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'investiny_local', 'src'))
@@ -47,13 +51,15 @@ class TickerParam:
     ema_short: int
     ema_long: int
     rsi: int
+    investing_id: Optional[int]
 
-    def __init__(self, symbol: str, name: str, ema_short: int, ema_long: int, rsi: int):
+    def __init__(self, symbol: str, name: str, ema_short: int, ema_long: int, rsi: int, investing_id: Optional[int] = None):
         self.symbol = symbol
         self.name = name
         self.ema_short = ema_short
         self.ema_long = ema_long
         self.rsi = rsi
+        self.investing_id = investing_id
 
 def load_ticker(path: str):
     with open(path, 'r') as f:
@@ -147,15 +153,99 @@ def get_investiny_id(ticker: str) -> Optional[int]:
         return None
 
 
+def save_investing_id_to_cache(symbol: str, investing_id: int, issi_path: str = "issi.json"):
+    """
+    Save investing_id to issi.json for caching purposes.
+    """
+    try:
+        # Load existing data
+        with open(issi_path, 'r') as f:
+            data = json.load(f)
+        
+        # Find and update the symbol
+        for item in data:
+            if item.get('symbol') == symbol:
+                item['investing_id'] = investing_id
+                break
+        
+        # Save back to file
+        with open(issi_path, 'w') as f:
+            json.dump(data, f, indent=2)
+        
+        print(f"✅ Saved investing_id {investing_id} for {symbol}")
+        
+    except Exception as e:
+        print(f"❌ Error saving investing_id for {symbol}: {e}")
+
+
+def get_investing_id_from_cache(symbol: str, issi_path: str = "issi.json") -> Optional[int]:
+    """
+    Get investing_id from issi.json cache.
+    """
+    try:
+        with open(issi_path, 'r') as f:
+            data = json.load(f)
+        
+        for item in data:
+            if item.get('symbol') == symbol and 'investing_id' in item:
+                return item['investing_id']
+        
+        return None
+        
+    except Exception as e:
+        print(f"❌ Error reading cache for {symbol}: {e}")
+        return None
+
+
+def get_or_fetch_investing_id(symbol: str, issi_path: str = "issi.json") -> Optional[int]:
+    """
+    Get investing_id from cache first, if not found then fetch from API.
+    """
+    # Try to get from cache first
+    cached_id = get_investing_id_from_cache(symbol, issi_path)
+    if cached_id:
+        print(f"📦 Using cached investing_id {cached_id} for {symbol}")
+        return cached_id
+    
+    # If not in cache, fetch from API
+    print(f"🔍 Fetching investing_id for {symbol} from API...")
+    investing_id = get_investiny_id(symbol)
+    
+    # Save to cache if found
+    if investing_id:
+        save_investing_id_to_cache(symbol, investing_id, issi_path)
+    
+    return investing_id
+
+
+def init_investing_ids_for_tickers(tickers: List[str], issi_path: str = "issi.json"):
+    """
+    Initialize investing_id for specific tickers and save to cache.
+    """
+    print(f"🚀 Initializing investing_id for {len(tickers)} tickers...")
+    
+    for ticker in tickers:
+        print(f"\n📊 Processing {ticker}...")
+        investing_id = get_or_fetch_investing_id(ticker, issi_path)
+        
+        if investing_id:
+            print(f"✅ {ticker} -> investing_id: {investing_id}")
+        else:
+            print(f"❌ Failed to get investing_id for {ticker}")
+    
+    print(f"\n🎉 Completed initialization for {len(tickers)} tickers!")
+
+
 def load_ohlcv(ticker: str, start: Optional[str]) -> pd.DataFrame:
     """
-    Load OHLCV data using investiny (primary).
+    Load OHLCV data using investiny (primary) with caching support.
     """
     if not start:
         start = '2020-01-01'
     
     try:
-        investiny_id = get_investiny_id(ticker)
+        # Use cached investing_id system
+        investiny_id = get_or_fetch_investing_id(ticker)
         if investiny_id:
             # Convert start date to investiny format (m/d/Y)
             start_date = pd.to_datetime(start).strftime('%m/%d/%Y')
@@ -695,18 +785,27 @@ def optimize(args):
 
 def main():
     # set -start to a year from now if not provided
-    one_year_ago = pd.Timestamp.now() - pd.DateOffset(years=1)
+    one_year_ago = (pd.Timestamp.now() - pd.DateOffset(years=1)).strftime('%Y-%m-%d')
 
     parser = argparse.ArgumentParser()
     parser.add_argument('--tickers', nargs='+', type=str, help='List of tickers to optimize (space separated)')
     parser.add_argument('--start', type=str, default=one_year_ago)
     parser.add_argument('--equity', type=float, default=100_000_000)
-    parser.add_argument('--risk', type=float, default=1.0, help='Risk per trade in % of equity')
+    parser.add_argument('--risk', type=float, default=1.0, help='Risk per trade in %% of equity')
     parser.add_argument('--plots', type=int, default=1, help='1=show plots, 0=no plots')
     parser.add_argument('--no-llm', action='store_true', help='Disable LLM and use fallback only')
     parser.add_argument('--optimize', action='store_true', help='Run Optuna parameter optimization')
     parser.add_argument('--backtest', action='store_true', help='Run backtest')
+    parser.add_argument('--init-investing-id', action='store_true', help='Initialize investing_id for specified tickers and save to cache')
     args = parser.parse_args()
+
+    if args.init_investing_id:
+        if not args.tickers:
+            print("❌ Error: --tickers is required when using --init-investing-id")
+            print("Example: python main.py --tickers WIFI.JK BRMS.JK --init-investing-id")
+            return
+        init_investing_ids_for_tickers(args.tickers)
+        return
 
     if args.optimize:
         optimize(args)
