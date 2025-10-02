@@ -38,8 +38,6 @@ import sys
 import os
 import argparse
 import json
-import cloudscraper
-from bs4 import BeautifulSoup
 
 # Add local investiny to path
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), 'investiny_local', 'src'))
