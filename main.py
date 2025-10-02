@@ -237,8 +237,22 @@ def fallback_decision(row: pd.Series) -> Dict[str, Any]:
 
     zone_1 = round(min(row.Pullback_EMA_SHORT, row.Pullback_ATR))
     zone_2 = round(max(row.Pullback_EMA_SHORT, row.Pullback_ATR))
-    atr_mult = 1.5 if regime == "trend_up" else 1.0
-    sl = round(zone_1 - atr_mult * row.ATR if not np.isnan(row.ATR) else zone_1 * 0.97)
+    
+    # Stop loss yang lebih ketat - berdasarkan persentase dari entry price
+    if regime == "trend_up":
+        # Trend up: SL 2-3% di bawah entry point
+        sl_pct = 0.025  # 2.5%
+    else:
+        # Ranging: SL 1.5-2% di bawah entry point  
+        sl_pct = 0.02   # 2%
+    
+    # SL minimum berdasarkan persentase, maksimum berdasarkan ATR
+    sl_pct_based = round(zone_1 * (1 - sl_pct))
+    sl_atr_based = round(zone_1 - 0.5 * row.ATR if not np.isnan(row.ATR) else zone_1 * 0.98)
+    
+    # Gunakan yang lebih ketat (lebih tinggi) antara persentase dan ATR
+    sl = max(sl_pct_based, sl_atr_based)
+    
     r = max(zone_1 - sl, 1e-6)
     tp1, tp2, tp3 = round(zone_1 + 1 * r), round(zone_1 + 2 * r), round(zone_1 + 3 * r)
 
@@ -330,11 +344,6 @@ def simulate(df: pd.DataFrame, ticker: str, start_idx: int, init_equity: float, 
                                     (exit_px - entry_px) / max(entry_px - sl_px, 1e-8)))
                 in_pos = False
                 exited = True
-            if not exited and i == len(df) - 2 and nxt['High'] < tp1:
-                equity += qty * (exit_px - entry_px)
-                trades.append(Trade(entry_date, entry_px, sl_px, [tp1, tp2, tp3], None, None, 0))
-                in_pos = False
-                exited = True
             if exited:
                 qty = 0.0
                 entry_date = None
@@ -370,6 +379,9 @@ def simulate(df: pd.DataFrame, ticker: str, start_idx: int, init_equity: float, 
                     qty = position_qty(equity, entry_px, sl_px, risk_pct)
                     entry_date = nxt.name
                     in_pos = qty > 0
+                    if i==len(df)-2:
+                        equity += qty * (exit_px - entry_px)
+                        trades.append(Trade(entry_date, entry_px, sl_px, [tp1, tp2, tp3], None, None, 0))
                     
     # finalize equity curve with last close
     if len(df) > 0:
