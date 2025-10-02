@@ -185,7 +185,7 @@
     "symbol": "ANTM.JK",
     "name": "Aneka Tambang Tbk.",
     "ema_short": 26,
-    "ema_long": 43,
+    "ema_long": 59,
     "rsi": 11
   },
   {
@@ -212,9 +212,9 @@
   {
     "symbol": "ARCI.JK",
     "name": "Archi Indonesia Tbk.",
-    "ema_short": 20,
-    "ema_long": 36,
-    "rsi": 14
+    "ema_short": 10,
+    "ema_long": 35,
+    "rsi": 21
   },
   {
     "symbol": "AREA.JK",
@@ -654,8 +654,8 @@
     "symbol": "BRMS.JK",
     "name": "Bumi Resources Minerals Tbk.",
     "ema_short": 22,
-    "ema_long": 38,
-    "rsi": 10
+    "ema_long": 67,
+    "rsi": 15
   },
   {
     "symbol": "BRRC.JK",
@@ -702,9 +702,9 @@
   {
     "symbol": "BTPS.JK",
     "name": "Bank BTPN Syariah Tbk.",
-    "ema_short": 24,
-    "ema_long": 65,
-    "rsi": 7
+    "ema_short": 17,
+    "ema_long": 56,
+    "rsi": 12
   },
   {
     "symbol": "BUAH.JK",
@@ -738,7 +738,7 @@
     "symbol": "BUMI.JK",
     "name": "Bumi Resources Tbk.",
     "ema_short": 10,
-    "ema_long": 65,
+    "ema_long": 37,
     "rsi": 11
   },
   {
@@ -1220,9 +1220,9 @@
   {
     "symbol": "EMTK.JK",
     "name": "Elang Mahkota Teknologi Tbk.",
-    "ema_short": 13,
-    "ema_long": 55,
-    "rsi": 17
+    "ema_short": 14,
+    "ema_long": 61,
+    "rsi": 15
   },
   {
     "symbol": "ENAK.JK",
@@ -1319,8 +1319,8 @@
     "symbol": "FILM.JK",
     "name": "MD Entertainment Tbk.",
     "ema_short": 21,
-    "ema_long": 64,
-    "rsi": 8
+    "ema_long": 47,
+    "rsi": 7
   },
   {
     "symbol": "FIRE.JK",
@@ -1787,9 +1787,9 @@
   {
     "symbol": "IMPC.JK",
     "name": "Impack Pratama Industri Tbk.",
-    "ema_short": 22,
-    "ema_long": 48,
-    "rsi": 12
+    "ema_short": 21,
+    "ema_long": 50,
+    "rsi": 14
   },
   {
     "symbol": "INCI.JK",
@@ -1836,16 +1836,16 @@
   {
     "symbol": "INDY.JK",
     "name": "Indika Energy Tbk.",
-    "ema_short": 14,
-    "ema_long": 56,
+    "ema_short": 10,
+    "ema_long": 57,
     "rsi": 7
   },
   {
     "symbol": "INET.JK",
     "name": "Sinergi Inti Andalan Prima Tbk.",
-    "ema_short": 30,
-    "ema_long": 61,
-    "rsi": 17
+    "ema_short": 10,
+    "ema_long": 70,
+    "rsi": 19
   },
   {
     "symbol": "INKP.JK",
@@ -2404,8 +2404,8 @@
     "symbol": "MAPA.JK",
     "name": "Map Aktif Adiperkasa Tbk.",
     "ema_short": 13,
-    "ema_long": 65,
-    "rsi": 9
+    "ema_long": 37,
+    "rsi": 15
   },
   {
     "symbol": "MAPB.JK",
@@ -2453,7 +2453,7 @@
     "symbol": "MBMA.JK",
     "name": "Merdeka Battery Materials Tbk.",
     "ema_short": 12,
-    "ema_long": 54,
+    "ema_long": 36,
     "rsi": 20
   },
   {
@@ -2487,9 +2487,9 @@
   {
     "symbol": "MDKA.JK",
     "name": "Merdeka Copper Gold Tbk.",
-    "ema_short": 23,
-    "ema_long": 54,
-    "rsi": 14
+    "ema_short": 24,
+    "ema_long": 42,
+    "rsi": 10
   },
   {
     "symbol": "MDKI.JK",
@@ -2676,9 +2676,9 @@
   {
     "symbol": "MPPA.JK",
     "name": "Matahari Putra Prima Tbk.",
-    "ema_short": 18,
-    "ema_long": 36,
-    "rsi": 12
+    "ema_short": 23,
+    "ema_long": 69,
+    "rsi": 21
   },
   {
     "symbol": "MPRO.JK",
@@ -2816,8 +2816,8 @@
   {
     "symbol": "NCKL.JK",
     "name": "Trimegah Bangun Persada Tbk.",
-    "ema_short": 12,
-    "ema_long": 51,
+    "ema_short": 13,
+    "ema_long": 41,
     "rsi": 11
   },
   {
@@ -3244,7 +3244,7 @@
     "symbol": "PTRO.JK",
     "name": "Petrosea Tbk.",
     "ema_short": 10,
-    "ema_long": 54,
+    "ema_long": 70,
     "rsi": 9
   },
   {
@@ -3656,8 +3656,8 @@
   {
     "symbol": "SMIL.JK",
     "name": "Sarana Mitra Luas Tbk.",
-    "ema_short": 15,
-    "ema_long": 44,
+    "ema_short": 17,
+    "ema_long": 49,
     "rsi": 21
   },
   {
@@ -3999,9 +3999,9 @@
   {
     "symbol": "TOBA.JK",
     "name": "TBS Energi Utama Tbk.",
-    "ema_short": 15,
-    "ema_long": 49,
-    "rsi": 7
+    "ema_short": 10,
+    "ema_long": 66,
+    "rsi": 10
   },
   {
     "symbol": "TOOL.JK",
@@ -4237,9 +4237,9 @@
   {
     "symbol": "WIFI.JK",
     "name": "Solusi Sinergi Digital Tbk.",
-    "ema_short": 28,
-    "ema_long": 40,
-    "rsi": 18
+    "ema_short": 15,
+    "ema_long": 46,
+    "rsi": 11
   },
   {
     "symbol": "WINR.JK",
@@ -4258,9 +4258,9 @@
   {
     "symbol": "WIRG.JK",
     "name": "WIR ASIA Tbk.",
-    "ema_short": 30,
-    "ema_long": 38,
-    "rsi": 13
+    "ema_short": 11,
+    "ema_long": 48,
+    "rsi": 19
   },
   {
     "symbol": "WMUU.JK",
@@ -4335,22 +4335,29 @@
   {
     "symbol": "BRPT.JK",
     "name": "BRPT.JK",
-    "ema_short": 11,
-    "ema_long": 62,
-    "rsi": 7
+    "ema_short": 12,
+    "ema_long": 63,
+    "rsi": 19
   },
   {
     "symbol": "CUAN.JK",
     "name": "CUAN.JK",
-    "ema_short": 12,
-    "ema_long": 62,
+    "ema_short": 13,
+    "ema_long": 38,
     "rsi": 10
   },
   {
     "symbol": "EMAS.JK",
     "name": "EMAS.JK",
-    "ema_short": 30,
-    "ema_long": 46,
-    "rsi": 19
+    "ema_short": 18,
+    "ema_long": 37,
+    "rsi": 14
+  },
+  {
+    "symbol": "BBRI.JK",
+    "name": "BBRI.JK",
+    "ema_short": 10,
+    "ema_long": 62,
+    "rsi": 16
   }
 ]

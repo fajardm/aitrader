@@ -513,21 +513,103 @@ def optuna_objective(trial, raw_df, equity, risk_pct, use_llm):
     result = simulate(df, ticker="OPT", start_idx=0, init_equity=equity, risk_pct=risk_pct, use_llm=use_llm)
     metrics = result['metrics']
 
-    # Objective: maximize win rate, minimize drawdown (multi-objective, here as a weighted sum)
+    # Extract key metrics
+    total_return = metrics['total_return_pct']
     win_rate = metrics['win_rate_pct']
     max_drawdown = metrics['max_drawdown_pct']
+    trades = metrics['trades']
 
-    print(f"Trial {trial.number}: win_rate={win_rate:.2f}%, drawdown={max_drawdown:.2f}%")
-    # You can adjust weights as needed
-    score = win_rate - abs(max_drawdown)
-    # score = retrun_pct
-    return score
+    print(f"Trial {trial.number}: return={total_return:.2f}%, win_rate={win_rate:.2f}%, drawdown={max_drawdown:.2f}%, trades={trades}")
+    
+    # Constraint: Max drawdown must be better than -5%
+    if max_drawdown < -5.0:
+        # Penalty for excessive drawdown
+        penalty = abs(max_drawdown + 5.0) * 10  # Heavy penalty
+        score = total_return - penalty
+        print(f"  → PENALIZED: DD={max_drawdown:.2f}% exceeds -5% limit, penalty={penalty:.2f}")
+        return score
+    
+    # Minimum trade requirement (avoid overfitting on few trades)
+    if trades < 10:
+        penalty = (10 - trades) * 5  # Penalty for too few trades
+        score = total_return - penalty
+        print(f"  → PENALIZED: Only {trades} trades (min 10), penalty={penalty:.2f}")
+        return score
+    
+    # Multi-objective optimization with ORIGINAL weights
+    # Primary: Total return (60%) - Maximize profits!
+    # Secondary: Win rate (25%) - Consistency matters  
+    # Tertiary: Drawdown control (15%) - Risk management
+    
+    return_score = total_return * 0.6        # High weight on raw return
+    win_rate_score = (win_rate - 50) * 0.5   # Reward for >50% win rate
+    drawdown_score = (5 + max_drawdown) * 3  # Moderate reward for smaller drawdown
+    
+    final_score = return_score + win_rate_score + drawdown_score
+    
+    print(f"  → SCORE: {final_score:.2f} (return={return_score:.2f} + win_rate={win_rate_score:.2f} + dd_control={drawdown_score:.2f})")
+    
+    return final_score
 
 def run_optuna(raw_df, equity, risk_pct, use_llm, n_trials):
     study = optuna.create_study(direction="maximize")
     study.optimize(lambda trial: optuna_objective(trial, raw_df, equity, risk_pct, use_llm), n_trials=n_trials)
+    
+    print("\n" + "="*80)
+    print("🎯 OPTIMIZATION RESULTS")
+    print("="*80)
     print("Best parameters:", study.best_params)
-    print("Best score (win_rate - drawdown):", study.best_value)
+    print(f"Best score: {study.best_value:.2f}")
+    
+    # Test best parameters to get detailed metrics
+    best_trial = study.best_trial
+    ema_short = best_trial.params['EMA_SHORT']
+    ema_long = best_trial.params['EMA_LONG']
+    rsi_period = best_trial.params['RSI']
+    
+    # Rebuild with best params
+    df = raw_df.copy()
+    df['EMA_SHORT'] = ema(df['Close'], ema_short)
+    df['EMA_LONG'] = ema(df['Close'], ema_long)
+    df['RSI'] = rsi(df['Close'], rsi_period)
+    ema12 = df['Close'].ewm(span=12, adjust=False).mean()
+    ema26 = df['Close'].ewm(span=26, adjust=False).mean()
+    macd = ema12 - ema26
+    signal = macd.ewm(span=9, adjust=False).mean()
+    df['MACD_HIST'] = macd - signal
+    df['ATR'] = atr(df, 14)
+    df['BB_MID'], df['BB_LOW'], df['BB_UP'] = bollinger(df['Close'], 20, 2)
+    df['Regime'] = classify_regime(df)
+    df['Pullback_EMA_SHORT'] = df['EMA_SHORT']
+    df['Pullback_ATR'] = df['Close'] - 0.5 * df['ATR']
+    df = df.dropna().copy()
+    
+    result = simulate(df, ticker="OPTIMIZED", start_idx=0, init_equity=equity, risk_pct=risk_pct, use_llm=use_llm)
+    best_metrics = result['metrics']
+    
+    print("\n📊 BEST STRATEGY PERFORMANCE:")
+    print(f"  • Total Return: {best_metrics['total_return_pct']:.2f}%")
+    print(f"  • Win Rate: {best_metrics['win_rate_pct']:.2f}%")
+    print(f"  • Max Drawdown: {best_metrics['max_drawdown_pct']:.2f}%")
+    print(f"  • Total Trades: {best_metrics['trades']}")
+    print(f"  • Profit Factor: {best_metrics['profit_factor']:.2f}")
+    print(f"  • Expectancy R: {best_metrics['expectancy_R']:.3f}")
+    
+    # Validate constraints
+    dd_ok = best_metrics['max_drawdown_pct'] >= -5.0
+    trades_ok = best_metrics['trades'] >= 10
+    
+    print("\n✅ CONSTRAINT VALIDATION:")
+    print(f"  • Max DD ≥ -5%: {'✅ PASS' if dd_ok else '❌ FAIL'} ({best_metrics['max_drawdown_pct']:.2f}%)")
+    print(f"  • Min Trades ≥ 10: {'✅ PASS' if trades_ok else '❌ FAIL'} ({best_metrics['trades']} trades)")
+    
+    if dd_ok and trades_ok:
+        print("\n🎉 OPTIMIZATION SUCCESS: All constraints satisfied!")
+    else:
+        print("\n⚠️  WARNING: Some constraints not met. Consider running more trials.")
+    
+    print("="*80)
+    
     return study
 
 def backtest(args):
