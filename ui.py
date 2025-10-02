@@ -378,7 +378,8 @@ def live_signals_page(tickers, ticker_symbols):
                             'Take Profits': f"{decision.get('take_profits', [])}",
                             'Position Size': f"{decision.get('position_size_pct', 0):.2f}%",
                             'Confidence': f"{decision.get('confidence', 0):.2f}%",
-                            'Current Price': f"{currentday.Close:.2f}"
+                            'Current Price': f"{currentday.Close:.2f}",
+                            'Valid Currentday': valid_currentday
                         })
                     
                     progress_bar.progress((i + 1) / len(selected_tickers))
