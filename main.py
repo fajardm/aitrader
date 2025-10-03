@@ -625,18 +625,9 @@ def optuna_objective(trial, raw_df, equity, risk_pct, use_llm):
         print(f"  → PENALIZED: Only {trades} trades (min 10), penalty={penalty:.2f}")
         return score
     
-    # Multi-objective optimization with ORIGINAL weights
-    # Primary: Total return (60%) - Maximize profits!
-    # Secondary: Win rate (25%) - Consistency matters  
-    # Tertiary: Drawdown control (15%) - Risk management
-    
-    return_score = total_return * 0.6        # High weight on raw return
-    win_rate_score = (win_rate - 50) * 0.5   # Reward for >50% win rate
-    drawdown_score = (5 + max_drawdown) * 3  # Moderate reward for smaller drawdown
-    
-    final_score = return_score + win_rate_score + drawdown_score
-    
-    print(f"  → SCORE: {final_score:.2f} (return={return_score:.2f} + win_rate={win_rate_score:.2f} + dd_control={drawdown_score:.2f})")
+    final_score = win_rate - abs(max_drawdown)
+
+    print(f" -> SCORE: {final_score:.2f} (return={total_return:.2f} + win_rate={win_rate:.2f} + dd_control={max_drawdown:.2f})")
     
     return final_score
 
