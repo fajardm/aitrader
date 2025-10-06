@@ -126,7 +126,7 @@ aitrader/
 - Signal generation (LLM or rule-based)
 - Portfolio-level aggregation
 
-## Tips
+## Tipss
 
 1. **First Time Setup**
    - Ensure `issi.json` exists with ticker configurations
